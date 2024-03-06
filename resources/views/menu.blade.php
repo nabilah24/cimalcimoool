@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- hero start --}}
-    <div class="hero-menu">
+    <div class="banner">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-5">

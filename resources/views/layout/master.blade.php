@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+
     {{-- bootstrap icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
@@ -41,18 +42,19 @@
                             href="/">BERANDA<span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ '' == request()->path() ? 'active' : '' }}" href="/#about"><span>TENTANG
-                                KAMI</span></a>
+                        <a class="nav-link {{ '/tentang' == request()->path() ? 'active' : '' }}" 
+                            href="/tentang"><span>TENTANG</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ '' == request()->path() ? 'active' : '' }}"
-                            href="#"><span>MENU</span></a>
+                        <a class="nav-link {{ '/menu' == request()->path() ? 'active' : '' }}"
+                            href="/menu"><span>MENU</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#contact">CONTACT<span></span></a>
+                        <a class="nav-link {{ '/contact' == request()->path() ? 'active' : '' }}""
+                            href="/contact">CONTACT<span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="bi bi-cart-fill"></i><span></span></a>
+                        <a class="nav-link" href=""><i class="bi bi-cart-fill"></i><span></span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link {{ 'tutorial/bhsisyarat' == request()->path() || 'tutorial/musik' == request()->path() || 'tutorial/tari' == request()->path() || 'tutorial/gambar' == request()->path() ? 'active' : '' }}"
@@ -60,10 +62,10 @@
                             <i class="bi bi-person-circle"></i><span></span>
                         </a>
                         <ul class="dropdown-menu bg-dark">
-                            <li><a class="dropdown-item {{ 'tutorial/bhsisyarat' == request()->path() ? 'active' : '' }}"
-                                    href="#">DAFTAR</span></a></li>
-                            <li><a class="dropdown-item {{ 'tutorial/musik' == request()->path() ? 'active' : '' }}"
-                                    href="#">MASUK<span></span></a></li>
+                            <li><a class="dropdown-item {{ 'register' == request()->path() ? 'active' : '' }}"
+                                    href="{{ url('register') }}">DAFTAR</span></a></li>
+                            <li><a class="dropdown-item {{ 'login' == request()->path() ? 'active' : '' }}"
+                                    href="{{ url('login') }}">MASUK<span></span></a></li>
                     </li>
                 </ul>
                 </li>
@@ -109,10 +111,10 @@
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email" style="border-color: #ffb75d">
-                        <button type="button"
-                            class="btn py-2 position-absolute top-0 end-0 mt-2 me-2" style="background-color: #ffb75d">SignUp</button>
+                        <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"
+                            style="border-color: #ffb75d">
+                        <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
+                            style="background-color: #ffb75d">SignUp</button>
                     </div>
                 </div>
             </div>

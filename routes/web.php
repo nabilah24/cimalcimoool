@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SemuaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('beranda');
-});
+Route::get('/', [SemuaController::class, 'beranda']);
+Route::get('/tentang', [SemuaController::class, 'tentang']);
+Route::get('/menu', [SemuaController::class, 'menu']);
+Route::get('/contact', [SemuaController::class, 'contact']);
 
+<<<<<<< HEAD
 Route::get('/menu', function () {
     return view('menu');
 });
@@ -40,3 +44,7 @@ Route::get('/shop', function () {
 Route::get('/thankyou', function () {
     return view('thankyou');
 });
+=======
+Route::get('/login', [SemuaController::class, 'login']);
+Route::get('/register', [SemuaController::class, 'register']);
+>>>>>>> 3d45b977c0a5a7520c617e82e6888987d0814187
