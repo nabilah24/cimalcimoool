@@ -19,3 +19,6 @@ Route::get('/', [SemuaController::class, 'beranda']);
 Route::get('/tentang', [SemuaController::class, 'tentang']);
 Route::get('/menu', [SemuaController::class, 'menu']);
 Route::get('/contact', [SemuaController::class, 'contact']);
+
+Route::get('/login', [SemuaController::class, 'login']);
+Route::get('/register', [SemuaController::class, 'register']);
