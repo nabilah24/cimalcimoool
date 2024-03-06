@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\AllController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AllController;
+use App\Http\Controllers\SemuaController;
 
 
 /*
@@ -16,14 +15,7 @@ use App\Http\Controllers\AllController;
 |
 */
 
-Route::get('/', function () {
-    return view('beranda');
-});
-
-Route::get('/menu', function () {
-    return view('menu');
-});
-
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/', [SemuaController::class, 'beranda']);
+Route::get('/tentang', [SemuaController::class, 'tentang']);
+Route::get('/menu', [SemuaController::class, 'menu']);
+Route::get('/contact', [SemuaController::class, 'contact']);
