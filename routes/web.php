@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AllController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,6 @@ Route::get('/menu', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
+Route::get('/login',[AllController::class,'login'])->name('login');
+Route::get('/register',[AllController::class,'register'])->name('register');

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+
     {{-- bootstrap icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
@@ -60,10 +61,10 @@
                             <i class="bi bi-person-circle"></i><span></span>
                         </a>
                         <ul class="dropdown-menu bg-dark">
-                            <li><a class="dropdown-item {{ 'tutorial/bhsisyarat' == request()->path() ? 'active' : '' }}"
-                                    href="#">DAFTAR</span></a></li>
-                            <li><a class="dropdown-item {{ 'tutorial/musik' == request()->path() ? 'active' : '' }}"
-                                    href="#">MASUK<span></span></a></li>
+                            <li><a class="dropdown-item {{ 'register' == request()->path() ? 'active' : '' }}"
+                                    href="{{ url('register') }}">DAFTAR</span></a></li>
+                            <li><a class="dropdown-item {{ 'login' == request()->path() ? 'active' : '' }}"
+                                    href="{{ url('login') }}">MASUK<span></span></a></li>
                     </li>
                 </ul>
                 </li>
