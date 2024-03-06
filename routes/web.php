@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AllController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('beranda');
-});
+// webUtama
+Route::get('/', [AllController::class, 'beranda']);
+Route::get('/tentang', [AllController::class, 'tentang']);
+Route::get('/menu', [AllController::class, 'menu']);
+Route::get('/contact', [AllController::class, 'contact']);
 
-Route::get('/menu', function () {
-    return view('menu');
-});
-
-Route::get('/index', function () {
-    return view('index');
-});
+// LoginRegister
+Route::get('/login', [AllController::class, 'login'])->name('login');

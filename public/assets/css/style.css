@@ -221,9 +221,9 @@ nav.solid {
     margin: 0 auto;
 }
 
-/* .text-center {
+.text-center {
     text-align: center;
-} */
+}
 
 .section-heading {
     font-size: 3rem;
@@ -232,7 +232,7 @@ nav.solid {
 }
 
 #tranding {
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 @media (max-width:1440px) {
@@ -307,7 +307,7 @@ nav.solid {
 }
 
 .rating ion-icon {
-    color: #ec994b;
+    color: var(--primary);
 }
 
 .swiper-slide-shadow-left,
@@ -711,58 +711,58 @@ nav.solid {
     border-right: none;
 }
 
-/* hero-menu */
-.hero-menu {
+/* banner */
+.banner {
     background: var(--primary);
     min-height: 48%;
     padding: calc(4rem - 30px) 0 0rem 0;
 }
 
 @media (min-width: 768px) {
-    .hero-menu {
+    .banner {
         padding: calc(4rem - 30px) 0 4rem 0;
     }
 }
 
 @media (min-width: 992px) {
-    .hero-menu {
+    .banner {
         padding: calc(8rem - 30px) 0 8rem 0;
     }
 }
 
-.hero-menu .intro-excerpt {
+.banner .intro-excerpt {
     position: relative;
     z-index: 4;
 }
 
 @media (min-width: 992px) {
-    .hero-menu .intro-excerpt {
+    .banner .intro-excerpt {
         max-width: 450px;
     }
 }
 
-.hero-menu h1 {
+.banner h1 {
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 30px;
 }
 
 @media (min-width: 1400px) {
-    .hero-menu h1 {
+    .banner h1 {
         font-size: 54px;
     }
 }
 
-.hero-menu p {
+.banner p {
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 30px;
 }
 
-.hero-menu .hero-img-wrap {
+.banner .hero-img-wrap {
     position: relative;
 }
 
-.hero-menu .hero-img-wrap img {
+.banner .hero-img-wrap img {
     position: relative;
     top: 0px;
     right: 0px;
@@ -772,14 +772,14 @@ nav.solid {
 }
 
 @media (min-width: 768px) {
-    .hero-menu .hero-img-wrap img {
+    .banner .hero-img-wrap img {
         right: 0px;
         left: -100px;
     }
 }
 
 @media (min-width: 992px) {
-    .hero-menu .hero-img-wrap img {
+    .banner .hero-img-wrap img {
         left: 0px;
         top: -80px;
         position: absolute;
@@ -788,14 +788,14 @@ nav.solid {
 }
 
 @media (min-width: 1200px) {
-    .hero-menu .hero-img-wrap img {
+    .banner .hero-img-wrap img {
         left: 0px;
         top: -80px;
         right: -100px;
     }
 }
 
-.hero-menu .hero-img-wrap:after {
+.banner .hero-img-wrap:after {
     content: "";
     position: absolute;
     width: 255px;
@@ -808,7 +808,7 @@ nav.solid {
 }
 
 @media (min-width: 1200px) {
-    .hero-menu .hero-img-wrap:after {
+    .banner .hero-img-wrap:after {
         top: -40px;
     }
 }
