@@ -20,5 +20,21 @@ Route::get('/tentang', [SemuaController::class, 'tentang']);
 Route::get('/menu', [SemuaController::class, 'menu']);
 Route::get('/contact', [SemuaController::class, 'contact']);
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/thankyou', function () {
+    return view('thankyou');
+});
 Route::get('/login', [SemuaController::class, 'login']);
 Route::get('/register', [SemuaController::class, 'register']);
+

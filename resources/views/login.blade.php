@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('assets/css/styles1.css') }}">
-=======
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
->>>>>>> 0d3c4ff699abc5d6725356b69cffd8154313e16c
 
 </head>
 
@@ -130,9 +126,6 @@
                         <div class="small"><a href="register">Need an account? Sign up!</a></div>
                     </div>
                 </form>
-
-
->>>>>>> 0d3c4ff699abc5d6725356b69cffd8154313e16c
             </div>
         </div>
 </body>
