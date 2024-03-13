@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Transparent Login Form HTML CSS</title>
+        <title>Register</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="{{ asset('assets/css/styles1.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -14,7 +14,8 @@
         <div class="bg-img">
             <div class="content">
                 <header>Daftar</header>
-                <form action="#">
+                <form action="/register" method="post">
+                    @csrf
                     <div class="field">
                         <span class="fa fa-user"></span>
                         <input type="username" required placeholder="Username" name="username" id="username" value="{{old('username')}}">
