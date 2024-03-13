@@ -37,4 +37,5 @@ Route::get('/thankyou', function () {
 });
 Route::get('/login', [SemuaController::class, 'login']);
 Route::get('/register', [SemuaController::class, 'register']);
+Route::post('/register', [SemuaController::class, 'store']);
 

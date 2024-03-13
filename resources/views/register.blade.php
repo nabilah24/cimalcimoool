@@ -12,46 +12,36 @@
           <div class="bg-img">
              <div class="content">
                 <header>Login Form</header>
-                <form action="#">
+                <form action="/register" method="post">
+                    @csrf
                     <div class="field">
                         <span class="fa fa-user"></span>
-                        <input type="text" required placeholder="Username">
+                        <input type="username" required placeholder="Username" name="username" id="username" value="{{old('username')}}">
                     </div>
                     <div class="field">
                         <span class="fa fa-user"></span>
-                        <input type="text" required placeholder="Nama">
+                        <input type="text" required placeholder="Nama" name="name" id="name" value="{{old('name')}}">
                     </div>
                     <div class="field">
                         <span class="fa fa-user"></span>
-                        <input type="text" required placeholder="Email">
+                        <input type="email" required placeholder="Email" name="email" id="email" value="{{old('email')}}">
                     </div>
                    <div class="field">
                       <span class="fa fa-user"></span>
-                      <input type="text" required placeholder="Phone">
+                      <input type="string" required placeholder="Phone" name="phone" id="phone" value="{{old('phone')}}">
                    </div>
                    <div class="field space">
                       <span class="fa fa-lock"></span>
-                      <input type="password" class="pass-key" required placeholder="Password">
+                      <input type="password" class="pass-key" required placeholder="Password" name="password" id="password">
                       <span class="show">SHOW</span>
                    </div>
                    <div class="pass">
                       <a href="#">Forgot Password?</a>
                    </div>
                    <div class="field">
-                      <input type="submit" value="LOGIN">
+                      <input type="submit" value="Daftar">
                    </div>
                 </form>
-                {{-- <div class="login">
-                   Or login with
-                </div>
-                <div class="links">
-                   <div class="facebook">
-                      <i class="fab fa-facebook-f"><span>Facebook</span></i>
-                   </div>
-                   <div class="instagram">
-                      <i class="fab fa-instagram"><span>Instagram</span></i>
-                   </div>
-                </div> --}}
                 <div class="signup">
                    Do you have account?
                    <a href="{{ url('login') }}">Signup Now</a>
