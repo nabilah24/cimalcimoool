@@ -4,16 +4,16 @@
     {{-- hero --}}
     <div class="-testimonial-xxl py-5 hero-header mb-5">
         <div class="-testimonial my-5 py-5">
-            <div class="row align-items-center g-5">
+            <div class="row align-items-center">
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="display-3 animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
                     <p class="animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                         Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
                         magna dolore erat amet</p>
                 </div>
-                <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                {{-- <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img class="img-fluid" src="{{ asset('assets/images/hero.png') }}" alt="">
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
         </div>
         <div class="-testimonial-xxl py-5">
             <div class="-testimonial">
-                <div class="row g-5 align-items-center">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start">
@@ -130,7 +130,7 @@
     {{-- about end --}}
 
     {{-- menu start --}}
-    <section id="tranding">
+    {{-- <section id="tranding">
         <div class="-testimonial-tranding">
             <h1 class="text-center section-heading">Menu Populer</h1>
         </div>
@@ -330,7 +330,7 @@
                     menu</a>
             </div>
         </div>
-    </section>
+    </section> --}}
     {{-- menu end --}}
 
     {{-- testimonial start --}}
