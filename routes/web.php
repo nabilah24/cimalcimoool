@@ -36,6 +36,7 @@ Route::get('/thankyou', function () {
     return view('thankyou');
 });
 Route::get('/login', [SemuaController::class, 'login']);
+Route::post('/login', [SemuaController::class, 'authenticate']);
 Route::get('/register', [SemuaController::class, 'register']);
 Route::post('/register', [SemuaController::class, 'store']);
 
