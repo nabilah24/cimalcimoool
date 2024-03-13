@@ -46,6 +46,14 @@ class SemuaController extends Controller
 
         return redirect('/login')->with('success', 'Daftar Akun Berhasil!! Selanjutnya Login');
     }
+    public function authenticate(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required'
+        ]);
 
+        dd('berhasil login');
+    }
 
 }
