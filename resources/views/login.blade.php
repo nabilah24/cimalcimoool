@@ -22,7 +22,7 @@
                     @csrf
                    <div class="field col-md-4">
                       <span class="fa fa-user"></span>
-                      <input type="email" required placeholder="Email or Phone" name="email" class="form-control @error('email') is-invalid @enderror">
+                      <input type="email" required placeholder="Email" name="email" class="form-control @error('email') is-invalid @enderror" autofocus>
                       @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
