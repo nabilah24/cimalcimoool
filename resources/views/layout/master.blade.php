@@ -42,19 +42,19 @@
                             href="/">BERANDA<span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ '/tentang' == request()->path() ? 'active' : '' }}" 
-                            href="/tentang"><span>TENTANG</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ '/menu' == request()->path() ? 'active' : '' }}"
+                        <a class="nav-link {{ '/menu' == request()->path() ? 'active' : '' }}" role="button"
                             href="/menu"><span>MENU</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ '/contact' == request()->path() ? 'active' : '' }}""
+                        <a class="nav-link {{ '/tentang' == request()->path() ? 'active' : '' }}" role="button"
+                            href="/tentang"><span>TENTANG</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ '/contact' == request()->path() ? 'active' : '' }}"" role="button"
                             href="/contact">CONTACT<span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=""><i class="bi bi-cart-fill"></i><span></span></a>
+                        <a class="nav-link" href="/cart"><i class="bi bi-cart-fill"></i><span></span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link {{ 'tutorial/bhsisyarat' == request()->path() || 'tutorial/musik' == request()->path() || 'tutorial/tari' == request()->path() || 'tutorial/gambar' == request()->path() ? 'active' : '' }}"
@@ -82,53 +82,34 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6 text-decoration-none">
-                    <h1 class="text-footer fw-bold mb-4">CimalCimol</h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
-                        stet lorem sit clita</p>
-                    <h4 class="section-title ff-secondary text-start fw-normal mb-4">Quick links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Our Menu</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
+                    <h2 class="text-footer fw-bold mb-4">CimalCimol</h2>
+                    <h5>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
+                        stet lorem sit clita</h5>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>
-                    <p class="mb-2"><i class="bi bi-geo-alt-fill me-3"></i>Jl.Dewandaru No.7 Malang</p>
-                    <p class="mb-2"><i class="bi bi-telephone-fill me-3"></i>+62 898-3550-049</p>
-                    <p class="mb-2"><i class="bi bi-envelope-fill me-3"></i>icimalcimoool@gmail.com</p>
+                    <h6 class="mb-2"><i class="bi bi-geo-alt-fill me-3"></i>Jl.Dewandaru No.7 Malang</h6>
+                    <h6 class="mb-2"><i class="bi bi-telephone-fill me-3"></i>+62 898-3550-049</h6>
+                    <h6 class="mb-2"><i class="bi bi-envelope-fill me-3"></i>icimalcimoool@gmail.com</h6>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="bi bi-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="bi bi-tiktok"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/cimalcimoool?igsh=OXo5em82dXlwMm8="><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Opening</h4>
-                    <h5 class="text-light fw-normal">Senin - Minggu</h5>
-                    <p>11.30 - 21.30</p>
-                    <h5 class="text-light fw-normal">Jumat</h5>
-                    <p>13.00 - 21.30</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start fw-normal mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"
-                            style="border-color: #ffb75d">
-                        <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
-                            style="background-color: #ffb75d">SignUp</button>
-                    </div>
+                    <h6 class="text-light fw-normal">Senin - Minggu</h5>
+                    <h6>11.30 - 21.30</p>
+                    <h6 class="text-light fw-normal">Jumat</h5>
+                    <h6>13.00 - 21.30</p>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">cimalcimol.com</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="">Kelompok 2 Teknik Informatika C
-                            UM</a><br><br>
-                        Distributed By <a class="border-bottom" href="" target="_blank">...</a>
+                    <div class="col-md-20 text-center text-md-start mb-3 mb-md-0">
+                        &copy; cimalcimol.com</a>, All Right Reserved. <br>
+                        Designed By Kelompok 2 Teknik Informatika C Universitas Negeri Malang</a><br>
                     </div>
                 </div>
             </div>
