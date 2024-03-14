@@ -16,8 +16,8 @@
     --bg: #f5f5dc;
 }
 
-/* html {
-    font-size: 62.5%;
+html {
+    /* font-size: 62.5%; */
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
 }
@@ -38,10 +38,10 @@
     html {
         zoom: 2.5;
     }
-} */
+}
 
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -217,6 +217,7 @@ nav.solid {
 /* menu */
 .container-tranding {
     max-width: 124rem;
+    /* max-height: 10rem; */
     padding: 0 1rem;
     margin: 0 auto;
 }
@@ -242,40 +243,45 @@ nav.solid {
 }
 
 #tranding .tranding-slider {
-    height: 52rem;
+    height: 35rem;
     padding: 2rem 0;
     position: relative;
+    /* jarak menu populer ke titik 3 */
 }
 
 @media (max-width:500px) {
     #tranding .tranding-slider {
         height: 45rem;
+        /* gatau */
     }
 }
 
 .tranding-slide {
-    width: 37rem;
-    height: 42rem;
+    width: 20rem;
+    height: 25rem;
     position: relative;
+    /* panjang kelihatan scrollnya INI YG PENTING*/
 }
 
-@media (max-width:500px) {
+@media (max-width:100px) {
     .tranding-slide {
         width: 28rem !important;
-        height: 36rem !important;
+        height: 30rem !important;
     }
 
     .tranding-slide .tranding-slide-img img {
         width: 28rem !important;
-        height: 36rem !important;
+        height: 30rem !important;
+        /* gatau */
     }
 }
 
 .tranding-slide .tranding-slide-img img {
-    width: 37rem;
-    height: 42rem;
+    width: 20rem;
+    height: 25rem;
     border-radius: 2rem;
     object-fit: cover;
+    /* ukuran gambar */
 }
 
 .tranding-slide .tranding-slide-content {
@@ -389,9 +395,32 @@ nav.solid {
     background: var(--primary);
 }
 
+/* order */
+.marketplace-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.261);
+    height: 200px;
+    transition: .5s;
+}
+
+.marketplace-item h2 {
+    color: #800020;
+}
+
+.marketplace-item:hover {
+    background: #800020;
+}
+
+.marketplace-item * {
+    transition: .5s;
+}
+
+.marketplace-item:hover * {
+    color: #f5f5dc !important;
+}
+
 /* testimonial */
 .container-testimonial {
-    height: 50vh;
+    height: 55vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -908,3 +937,40 @@ nav.solid {
 .product-section .product-item:hover:before {
     height: 70%;
 }
+
+/* btn dari style 2 */
+.btn {
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    background: #2f2f2f;
+    border-color: #2f2f2f; }
+    .btn:hover {
+      color: #ffffff;
+      background: #222222;
+      border-color: #222222; }
+    .btn:active, .btn:focus {
+      outline: none !important;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    .btn.btn-primary {
+      background: #3b5d50;
+      border-color: #3b5d50; }
+      .btn.btn-primary:hover {
+        background: #314d43;
+        border-color: #314d43; }
+    .btn.btn-secondary {
+      color: #2f2f2f;
+      background: #f9bf29;
+      border-color: #f9bf29; }
+      .btn.btn-secondary:hover {
+        background: #f8b810;
+        border-color: #f8b810; }
+    .btn.btn-white-outline {
+      background: transparent;
+      border-width: 2px;
+      border-color: rgba(255, 255, 255, 0.3); }
+      .btn.btn-white-outline:hover {
+        border-color: white;
+        color: #ffffff; }
