@@ -9,6 +9,9 @@ use App\Models\User;
 
 class SemuaController extends Controller
 {
+    public function index(){
+        return view('index');
+    }
     public function beranda(){
         return view('beranda');
     }
