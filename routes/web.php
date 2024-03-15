@@ -15,6 +15,7 @@ use App\Http\Controllers\SemuaController;
 |
 */
 
+Route::get('/', [SemuaController::class, 'index']);
 Route::get('/beranda', [SemuaController::class, 'beranda']);
 Route::get('/tentang', [SemuaController::class, 'tentang']);
 Route::get('/menu', [SemuaController::class, 'menu']);
