@@ -1,4 +1,6 @@
+@extends('layout.mastercart')
 
+@section('content')
 
 		<!-- Start Hero Section -->
 			<div class="hero">
@@ -137,4 +139,4 @@
             </div>
           </div>
 
-
+    @endsection

@@ -46,7 +46,7 @@
 
 		</nav>
 		<!-- End Header/Navigation -->
-
+        @yield('content')
               <!-- Start Footer Section -->
               <footer class="footer-section">
                 <div class="container relative">
