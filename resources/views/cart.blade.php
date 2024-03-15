@@ -1,9 +1,27 @@
-@extends('layout.mastercart')
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
 
-@section('content')
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+		<!-- Bootstrap CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="assets/css/tiny-slider.css" rel="stylesheet">
+		<link href="assets/css/style2.css" rel="stylesheet">
+	</head>
 
+    @extends('layout.master')
+
+    @section('content')
+
+	<body>
 		<!-- Start Hero Section -->
-			<div class="hero">
+			<div class="hero" style="height: 100px;">
 				<div class="container">
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
@@ -11,15 +29,10 @@
 								<h1>Cart</h1>
 							</div>
 						</div>
-						<div class="col-lg-7">
-
-						</div>
 					</div>
 				</div>
 			</div>
 		<!-- End Hero Section -->
-
-
 
 		<div class="untree_co-section before-footer-section">
             <div class="container">
@@ -98,7 +111,7 @@
                       <button class="btn btn-black btn-sm btn-block">Update Cart</button>
                     </div>
                     <div class="col-md-6">
-                        <button class="btn btn-outline-black btn-sm btn-block" onclick="window.location.href='./shop'">Continue Shopping</button>
+                        <button class="btn btn-outline-black btn-sm btn-block" onclick="window.location.href='./menu'">Continue Shopping</button>
                     </div>
                   </div>
                 </div>
@@ -126,7 +139,6 @@
                           <strong class="text-black">$230.00</strong>
                         </div>
                       </div>
-
                       <div class="row">
                         <div class="col-md-12">
                           <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='./checkout'">Proceed To Checkout</button>
@@ -139,4 +151,11 @@
             </div>
           </div>
 
-    @endsection
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+
+</html>
+
+@endsection
