@@ -3,7 +3,7 @@
     <html lang="en" dir="ltr">
        <head>
           <meta charset="utf-8">
-          <title>Transparent Login Form HTML CSS</title>
+          <title>LOGIN</title>
           <link rel="stylesheet" href="style.css">
           <link rel="stylesheet" href="{{ asset('assets/css/styles1.css') }}">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
