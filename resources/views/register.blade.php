@@ -32,13 +32,15 @@
                       <span class="fa fa-user"></span>
                       <input type="string" required placeholder="Phone" name="phone" id="phone" value="{{old('phone')}}">
                    </div>
-                   <div class="field">
+                   <div class="field space">
                       <span class="fa fa-lock"></span>
                       <input type="password" class="pass-key" required placeholder="Password" name="password" id="password">
                       <span class="show">SHOW</span>
                    </div>
-
-                   <div class="field space">
+                   <div class="pass">
+                      <a href="#">Forgot Password?</a>
+                   </div>
+                   <div class="field">
                       <input type="submit" value="Daftar">
                    </div>
                 </form>
