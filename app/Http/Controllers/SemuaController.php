@@ -35,6 +35,8 @@ class SemuaController extends Controller
     public function register(){
         return view('register');
     }
+    
+    //register
     public function store(Request $request){
         $validatedData = $request->validate([
             'name' => 'required|max:20',
@@ -49,6 +51,8 @@ class SemuaController extends Controller
 
         return redirect('/login')->with('success', 'Daftar Akun Berhasil!! Selanjutnya Login');
     }
+
+    //login
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
