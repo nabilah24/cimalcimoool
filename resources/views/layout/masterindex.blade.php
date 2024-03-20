@@ -88,10 +88,6 @@
                     <h1 class="text-footer fw-bold mb-4">CimalCimol</h1>
                     <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
                         stet lorem sit clita</p>
-                    <h4 class="section-title ff-secondary text-start fw-normal mb-4">Quick links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Our Menu</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>
@@ -110,28 +106,14 @@
                     <h5 class="text-light fw-normal">Jumat</h5>
                     <p>13.00 - 21.30</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start fw-normal mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"
-                            style="border-color: #ffb75d">
-                        <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
-                            style="background-color: #ffb75d">SignUp</button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">cimalcimol.com</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="">Kelompok 2 Teknik Informatika C
-                            UM</a><br><br>
-                        Distributed By <a class="border-bottom" href="" target="_blank">...</a>
+                    <div class="col-md-20 text-center text-md-start mb-3 mb-md-0">
+                        &copy; cimalcimol.com</a>, All Right Reserved. <br>
+                        Designed By Kelompok 2 Teknik Informatika C Universitas Negeri Malang</a><br>
                     </div>
                 </div>
             </div>

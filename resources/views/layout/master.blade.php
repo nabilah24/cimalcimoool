@@ -88,7 +88,6 @@
                     <h1 class="text-footer fw-bold mb-4">CimalCimol</h1>
                     <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
                         stet lorem sit clita</p>
-                    <h4 class="section-title ff-secondary text-start fw-normal mb-4">Quick links</h4>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>
@@ -122,13 +121,9 @@
         <div class="container">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">cimalcimol.com</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="">Kelompok 2 Teknik Informatika C
-                            UM</a><br><br>
-                        Distributed By <a class="border-bottom" href="" target="_blank">...</a>
+                    <div class="col-md-20 text-center text-md-start mb-3 mb-md-0">
+                        &copy; cimalcimol.com</a>, All Right Reserved. <br>
+                        Designed By Kelompok 2 Teknik Informatika C Universitas Negeri Malang</a><br>
                     </div>
                 </div>
             </div>
