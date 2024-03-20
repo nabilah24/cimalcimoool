@@ -37,9 +37,6 @@
                   <input type="password" class="pass-key" required placeholder="Password" name="password" id="password">
                   <span class="show">SHOW</span>
                </div>
-               <div class="pass">
-                  <a href="#">Forgot Password?</a>
-               </div>
                <div class="field">
                   <input type="submit" value="Daftar">
                </div>
