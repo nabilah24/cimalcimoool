@@ -6,11 +6,9 @@
         <div class="container my-5 py-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-3 animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                    <p class="animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam
-                        ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita
-                        duo justo magna dolore erat amet</p>
-                    <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                    <h1 class="display-3 animated slideInLeft" style="color: #000000; text-shadow: 2px 2px 4px #ffb75d;">Enjoy Our Delicious Meal</h1>
+                    <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Selamat datang di Cimalcimol, tempat di mana kenikmatan bertemu dengan kreasi! Nikmati berbagai macam camilan lezat dan inovatif kami yang pasti akan memanjakan lidah Anda. Selamat menikmati!</p>
+                    {{--  <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" style="background-color: #000000; border-color: #000000; color: #ffb75d; text-shadow: 2px 2px 4px #ffb75d;">Book A Table</a>  --}}
                 </div>
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img class="img-fluid" src="{{ asset('assets/images/hero/hero.png') }}" alt="">

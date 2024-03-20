@@ -6,12 +6,13 @@
         <div class="container my-5 py-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-3 animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                    <p class="animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam
+                    <h1 class="display-3 animated slideInLeft" style="color: #000000; text-shadow: 2px 2px 4px #ffb75d;">Enjoy Our Delicious Meal</h1>
+                    {{--  <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Tempor erat elitr rebum at clita. Diam dolor diam
                         ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita
-                        duo justo magna dolore erat amet</p>
-                    <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                        duo justo magna dolore erat amet</p>  --}}
+                        <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" style="background-color: #800020; border-color: #000000; color: #ffb75d; text-shadow: 2px 2px 4px #ffb75d;">Registrasion Now</a>
                 </div>
+
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img class="img-fluid" src="{{ asset('assets/images/hero/hero.png') }}" alt="">
                 </div>
@@ -28,11 +29,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://g.co/kgs/z5gqR3H" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/outlet.png') }}" alt=""width="70px"
                                         height="70px">&nbsp; <b>Outlet</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Jl. Dewandaru No.7 Malang</p>
                             </div>
                         </div>
                     </a>
@@ -41,11 +42,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://gofood.link/a/KLgpw5k" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/gofood.png') }}" alt=""width="70px"
                                         height="70px">&nbsp;<b>Go Food</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Cimal Cimol, Lowokwaru</p>
                             </div>
                         </div>
                     </a>
@@ -54,11 +55,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://r.grab.com/g/6-20240312_162107_abee3d6021eeb716_MEXMPS-6-C2B3MCN2VKXXHE" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/grabfood.png') }}"
                                         alt=""width="70px" height="70px">&nbsp;<b>Grab Food</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Cimal Cimol - Jatimulyo</p>
                             </div>
                         </div>
                     </a>
@@ -67,11 +68,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://shopee.co.id/universal-link/now-food/shop/1283940?deep_and_deferred=1&shareChannel=copy_link" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/shopee.png') }}" alt=""width="70px"
                                         height="70px">&nbsp;<b>Shopee Food</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Cimal Cimol - Lowokwaru</p>
                             </div>
                         </div>
                     </a>
@@ -106,11 +107,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h3 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h3>
-                    <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Restoran</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                    <h3 class="display-3 animated slideInLeft" style="color: #000000; text-shadow: 2px 2px 4px #ffb75d;">About Us</h3>
+                    <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                         eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                    <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                         eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
