@@ -89,9 +89,6 @@
                     <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
                         stet lorem sit clita</p>
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Quick links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Our Menu</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>

@@ -25,8 +25,9 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <a class="text-decoration-none" href="">
+                    <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
+                            <a href="https://g.co/kgs/z5gqR3H" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
                             <div class="p-4">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/outlet.png') }}" alt=""width="70px"
@@ -37,8 +38,9 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <a class="text-decoration-none" href="">
+                    <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
+                            <a href="https://gofood.link/a/KLgpw5k" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
                             <div class="p-4">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/gofood.png') }}" alt=""width="70px"
@@ -49,8 +51,9 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <a class="text-decoration-none" href="">
+                    <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
+                            <a href="https://r.grab.com/g/6-20240312_162107_abee3d6021eeb716_MEXMPS-6-C2B3MCN2VKXXHE" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
                             <div class="p-4">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/grabfood.png') }}"
@@ -61,8 +64,9 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <a class="text-decoration-none" href="">
+                    <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
+                            <a href="https://shopee.co.id/universal-link/now-food/shop/1283940?deep_and_deferred=1&shareChannel=copy_link" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
                             <div class="p-4">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/shopee.png') }}" alt=""width="70px"
@@ -367,47 +371,38 @@
     </section>
     {{-- tranding menu end --}}
 
-    {{-- testimonial --}}
+    {{-- testimonial start --}}
     <section class="container-testimonial">
         <div class="testimonial mySwiper">
             <div class="testi-content swiper-wrapper">
                 <div class="slide swiper-slide">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
-                    </p>
                     <i class="bi bi-quote"></i>
+                    <p>
+                        Makanan ringan dari Cimalcimol adalah pilihan terbaik untuk memuaskan selera. Cimol dan aci gulung mereka selalu renyah dan lezat. Varian lainnya seperti makaroni dan basreng juga tidak kalah menggugah selera. Terima kasih Cimalcimol, sudah menyajikan camilan terbaik!
+                    </p>
                     <div class="details">
-                        <span class="name">Marnie Lotter</span>
-                        <span class="job">Web Developer</span>
+                        <span class="name">Talitha Najwa</span>
+                        <span class="job">Owner Club E-Sport</span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
-                    </p>
                     <i class="bi bi-quote"></i>
+                    <p>
+                        Cimalcimol selalu menjadi solusi ketika saya ingin camilan yang nikmat dan memuaskan. Dari cimol hingga basreng, semuanya memiliki rasa yang enak dan tekstur yang pas. Terima kasih Cimalcimol, sudah menjadi teman setia saat lapar!
+                    </p>
                     <div class="details">
-                        <span class="name">Marnie Lotter</span>
-                        <span class="job">Web Developer</span>
+                        <span class="name">Rizky Puspita</span>
+                        <span class="job">Duta Teknik</span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
-                    </p>
                     <i class="bi bi-quote"></i>
+                    <p>
+                        Rasa camilan dari Cimalcimol tidak pernah mengecewakan. Cimol, aci gulung, dan makaroni mereka selalu menjadi pilihan favorit saya. Dorodok dan basreng juga tidak kalah lezat. Terima kasih Cimalcimol, telah menyediakan camilan yang sempurna!
+                    </p>
                     <div class="details">
-                        <span class="name">Marnie Lotter</span>
-                        <span class="job">Web Developer</span>
+                        <span class="name">Satria Baja Hitam</span>
+                        <span class="job">Influencer Tiktok</span>
                     </div>
                 </div>
             </div>
@@ -424,8 +419,7 @@
             <div class="row">
                 <div class="col text-center mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h3 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h3>
-                        <h1 class="mb-5">Most Popular Items</h1>
+                        <h3 class="section-title ff-secondary text-center text-primary fw-normal">Find Us</h3>
                     </div>
                 </div>
             </div>
@@ -435,64 +429,6 @@
                     width="100%" height="270px" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
-            <div class="row mt-5">
-                <div class="col-lg-4">
-                    <div class="info">
-                        <div class="address">
-                            <i class="bi bi-geo-alt"></i>
-                            <h4>Location:</h4>
-                            <p>Jl. Dewandaru No.7 Malang</p>
-                        </div>
-
-                        <div class="email">
-                            <i class="bi bi-envelope"></i>
-                            <h4>Email:</h4>
-                            <p>cimalcimoool@gmail.com</p>
-                        </div>
-
-                        <div class="phone">
-                            <i class="bi bi-phone"></i>
-                            <h4>Call:</h4>
-                            <p>+62 898-3550-049</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-8 mt-5 mt-lg-0">
-
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name"
-                                    placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject"
-                                placeholder="Subject" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
-
-                </div>
-
-            </div>
-
         </div>
     </section>
     {{-- contact end --}}
