@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>
-                    <p class="mb-2"><i class="bi bi-geo-alt-fill me-3"></i>Jl.Dewandaru No.7 Malang</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt-fill me-3"></i>Jl. Dewandaru No.7 Malang</p>
                     <p class="mb-2"><i class="bi bi-telephone-fill me-3"></i>+62 898-3550-049</p>
                     <p class="mb-2"><i class="bi bi-envelope-fill me-3"></i>icimalcimoool@gmail.com</p>
                     <div class="d-flex pt-2">
@@ -105,16 +105,6 @@
                     <p>11.30 - 21.30</p>
                     <h5 class="text-light fw-normal">Jumat</h5>
                     <p>13.00 - 21.30</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start fw-normal mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"
-                            style="border-color: #ffb75d">
-                        <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
-                            style="background-color: #ffb75d">SignUp</button>
-                    </div>
                 </div>
             </div>
         </div>

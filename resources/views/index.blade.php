@@ -392,7 +392,7 @@
                     </p>
                     <div class="details">
                         <span class="name">Rizky Puspita</span>
-                        <span class="job">Duta Teknik</span>
+                        <span class="job">Winner Fashion Show Muslimah Mandalika 2024</span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
@@ -402,7 +402,7 @@
                     </p>
                     <div class="details">
                         <span class="name">Satria Baja Hitam</span>
-                        <span class="job">Influencer Tiktok</span>
+                        <span class="job">CEO PT Pencari Cinta</span>
                     </div>
                 </div>
             </div>

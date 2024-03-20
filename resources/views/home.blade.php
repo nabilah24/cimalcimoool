@@ -28,11 +28,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://g.co/kgs/z5gqR3H" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/outlet.png') }}" alt=""width="70px"
                                         height="70px">&nbsp; <b>Outlet</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Jl. Dewandaru No.7 Malang</p>
                             </div>
                         </div>
                     </a>
@@ -41,11 +41,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://gofood.link/a/KLgpw5k" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/gofood.png') }}" alt=""width="70px"
                                         height="70px">&nbsp;<b>Go Food</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Cimal Cimol, Lowokwaru</p>
                             </div>
                         </div>
                     </a>
@@ -54,11 +54,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://r.grab.com/g/6-20240312_162107_abee3d6021eeb716_MEXMPS-6-C2B3MCN2VKXXHE" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/grabfood.png') }}"
                                         alt=""width="70px" height="70px">&nbsp;<b>Grab Food</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Cimal Cimol - Jatimulyo</p>
                             </div>
                         </div>
                     </a>
@@ -67,11 +67,11 @@
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
                             <a href="https://shopee.co.id/universal-link/now-food/shop/1283940?deep_and_deferred=1&shareChannel=copy_link" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4">
+                            <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/shopee.png') }}" alt=""width="70px"
                                         height="70px">&nbsp;<b>Shopee Food</b></h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Cimal Cimol - Lowokwaru</p>
                             </div>
                         </div>
                     </a>
@@ -392,7 +392,7 @@
                     </p>
                     <div class="details">
                         <span class="name">Rizky Puspita</span>
-                        <span class="job">Duta Teknik</span>
+                        <span class="job">Winner Fashion Show Muslimah Mandalika 2024</span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
@@ -402,7 +402,7 @@
                     </p>
                     <div class="details">
                         <span class="name">Satria Baja Hitam</span>
-                        <span class="job">Influencer Tiktok</span>
+                        <span class="job">CEO PT Pencari Cinta</span>
                     </div>
                 </div>
             </div>
