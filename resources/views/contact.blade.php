@@ -1,23 +1,24 @@
 @extends('layout.master')
 
 @section('content')
-
-    {{-- hero start --}}
-    <div class="banner">
+    {{-- hero --}}
+    <div class="hero">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-5">
                     <div class="intro-excerpt">
-                        <h1>Contact</h1>
-                        <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-                            vulputate velit imperdiet dolor tempor tristique.</p>
-                        <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#"
-                                class="btn btn-white-outline">Explore</a></p>
+                        <h1>Contact Us</h1>
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item text-decoration-none"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/about">About</a></li>
+                            <li class="breadcrumb-item"><a href="/menu">Menu</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="hero-img-wrap">
-                        <img src="{{asset('assets/images/logo.png')}}" class="img-fluid">
+                        <img src="{{ asset('assets/images/logo/logo.png') }}" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -25,13 +26,13 @@
     </div>
     {{-- hero end --}}
 
-    {{-- contact start --}}
+    {{-- contact --}}
     <section id="contact" style="margin-top: 50px">
         <div class="container">
             <div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4894405374253!2d112.62180907443569!3d-7.948266579182089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629d96cb83ab3%3A0xaf7f420d67935f0c!2sJl.%20Dewandaru%20No.7%2C%20Jatimulyo%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065141!5e0!3m2!1sid!2sid!4v1709088591891!5m2!1sid!2sid"
-                    width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="270px" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
@@ -53,7 +54,7 @@
                         <div class="phone">
                             <i class="bi bi-phone"></i>
                             <h4>Call:</h4>
-                            <p>+62 </p>
+                            <p>+62 898-3550-049</p>
                         </div>
 
                     </div>
@@ -95,3 +96,5 @@
         </div>
     </section>
     {{-- contact end --}}
+@section('scripts')
+@endsection

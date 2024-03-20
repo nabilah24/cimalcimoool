@@ -1,161 +1,121 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+@extends('layout.master')
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="bootstrap, bootstrap4" />
-		<!-- Bootstrap CSS -->
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="assets/css/tiny-slider.css" rel="stylesheet">
-		<link href="assets/css/style2.css" rel="stylesheet">
-	</head>
-
-    @extends('layout.master')
-
-    @section('content')
-
-	<body>
-		<!-- Start Hero Section -->
-			<div class="hero" style="height: 100px;">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>Cart</h1>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- End Hero Section -->
-
-		<div class="untree_co-section before-footer-section">
-            <div class="container">
-              <div class="row mb-5">
-                <form class="col-md-12" method="post">
-                  <div class="site-blocks-table">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th class="product-thumbnail">Image</th>
-                          <th class="product-name">Product</th>
-                          <th class="product-price">Price</th>
-                          <th class="product-quantity">Quantity</th>
-                          <th class="product-total">Total</th>
-                          <th class="product-remove">Remove</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="product-thumbnail">
-                            <img src="images/product-1.png" alt="Image" class="img-fluid">
-                          </td>
-                          <td class="product-name">
-                            <h2 class="h5 text-black">Product 1</h2>
-                          </td>
-                          <td>$49.00</td>
-                          <td>
-                            <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                              <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
-                              </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
-                              </div>
-                            </div>
-
-                          </td>
-                          <td>$49.00</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                        </tr>
-
-                        <tr>
-                          <td class="product-thumbnail">
-                            <img src="images/product-2.png" alt="Image" class="img-fluid">
-                          </td>
-                          <td class="product-name">
-                            <h2 class="h5 text-black">Product 2</h2>
-                          </td>
-                          <td>$49.00</td>
-                          <td>
-                            <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                              <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
-                              </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
-                              </div>
-                            </div>
-
-                          </td>
-                          <td>$49.00</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </form>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row mb-5">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <button class="btn btn-black btn-sm btn-block">Update Cart</button>
+@section('content')
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>My Cart</h1>
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item text-decoration-none"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/menu">Menu</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">My Cart</li>
+                        </ol>
                     </div>
-                    <div class="col-md-6">
-                        <button class="btn btn-outline-black btn-sm btn-block" onclick="window.location.href='./menu'">Continue Shopping</button>
-                    </div>
-                  </div>
                 </div>
-                <div class="col-md-6 pl-5">
-                  <div class="row justify-content-end">
-                    <div class="col-md-7">
-                      <div class="row">
-                        <div class="col-md-12 text-right border-bottom mb-5">
-                          <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col-md-6">
-                          <span class="text-black">Subtotal</span>
-                        </div>
-                        <div class="col-md-6 text-right">
-                          <strong class="text-black">$230.00</strong>
-                        </div>
-                      </div>
-                      <div class="row mb-5">
-                        <div class="col-md-6">
-                          <span class="text-black">Total</span>
-                        </div>
-                        <div class="col-md-6 text-right">
-                          <strong class="text-black">$230.00</strong>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='./checkout'">Proceed To Checkout</button>
-                        </div>
-                      </div>
+                <div class="col-lg-7">
+                    <div class="hero-img-wrap">
+                        <img src="{{ asset('assets/images/logo/logo.png') }}" class="img-fluid">
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
+    {{-- hero end --}}
 
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/tiny-slider.js"></script>
-		<script src="js/custom.js"></script>
-	</body>
+    {{-- menu --}}
+    <div class="container-xxl py-5">
+        <div class="container">
+                    <table id="cart" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php $total = 0 @endphp
+                            @if (session('cart'))
+                                @foreach (session('cart') as $id => $details)
+                                    <tr rowId="{{ $id }}">
+                                        <td data-th="Product">
+                                            <div class="row">
+                                                <div class="col-sm-3 hidden-xs"><img
+                                                        src="{{ asset('/storage/gambar/' . $details['gambar']) }}"
+                                                        class="card-img-top" />
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <h4 class="nomargin">{{ $details['nama_item'] }}</h4>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Price">Rp {{ $details['harga'] }}</td>
 
-</html>
+                                        <td data-th="Subtotal" class="text-center"></td>
+                                        <td class="actions">
+                                            <a class="btn btn-outline-danger btn-sm delete-product"><i
+                                                    class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{{ url('/menu') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>
+                                        Continue
+                                        Shopping</a>
+                                    <button class="btn btn-danger">Checkout</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
 
+@section('scripts')
+    <script type="text/javascript">
+        $(".edit-cart-info").change(function(e) {
+            e.preventDefault();
+            var ele = $(this);
+            $.ajax({
+                url: '{{ route('update.shopping.cart') }}',
+                method: "patch",
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    id: ele.parents("tr").attr("rowId"),
+                },
+                success: function(response) {
+                    window.location.reload();
+                }
+            });
+        });
+
+        $(".delete-product").click(function(e) {
+            e.preventDefault();
+
+            var ele = $(this);
+
+            if (confirm("Do you really want to delete?")) {
+                $.ajax({
+                    url: '{{ route('delete.cart.item') }}',
+                    method: "DELETE",
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        id: ele.parents("tr").attr("rowId")
+                    },
+                    success: function(response) {
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+    </script>
 @endsection
