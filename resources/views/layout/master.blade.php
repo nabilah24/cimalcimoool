@@ -68,7 +68,7 @@
                             <li><a class="dropdown-item {{ '/' == request()->path() ? 'active' : '' }}"
                                     href="{{ url('/') }}">Profil</span></a></li>
                             <li><a class="dropdown-item {{ '/' == request()->path() ? 'active' : '' }}"
-                                    href="{{ url('/') }}">Logout<span></span></a></li>
+                                    href="{{ route('logout') }}">Logout<span></span></a></li>
                     </li>
                 </ul>
                 </li>

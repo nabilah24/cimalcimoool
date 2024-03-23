@@ -53,30 +53,30 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required',
         ],
-        [
-            'email.required' => 'Email Wajib Diisi',
-            'password.required' => 'Password Wajib Diisi',
-        ]);
+            [
+                'email.required' => 'Email Wajib Diisi',
+                'password.required' => 'Password Wajib Diisi',
+            ]);
 
         $infologin = [
             'email' => $request->email,
             'password' => $request->password,
         ];
 
-        if(Auth::attempt($infologin)){
-            if(Auth::user()->role =='admin'){
-                return redirect('dashboard');
-            } elseif (Auth::user()->role == 'user'){
-                return redirect('home');
-            }
-        }else{
-            return redirect('')->withErrors('Username Atau Password Yang Dimasukkan Tidak Sesuai')->withInput();
+        if (Auth::attempt($infologin)) {
+            return match (Auth::user()->role) {
+                'admin' => redirect('dashboard'),
+                'user' => redirect('home'),
+            };
         }
+
+        return redirect('login')->with('failed', 'Username Atau Password Yang Dimasukkan Tidak Sesuai');
     }
+
     //logout
-    function logout(){
+    public function logout(){
         Auth::logout();
-        return redirect('');
+        return redirect('/')->with('success', 'Anda berhasil logout!!');
     }
 
     //FUNGSI LUPA PASSWORD

@@ -10,7 +10,7 @@
                     {{--  <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Tempor erat elitr rebum at clita. Diam dolor diam
                         ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita
                         duo justo magna dolore erat amet</p>  --}}
-                        <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" style="background-color: #800020; border-color: #000000; color: #ffb75d; text-shadow: 2px 2px 4px #ffb75d;">Registrasion Now</a>
+                        <a href="{{ url('/register') }}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" style="background-color: #800020; border-color: #000000; color: #ffb75d; text-shadow: 2px 2px 4px #ffb75d;">Registrasion Now</a>
                 </div>
 
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
