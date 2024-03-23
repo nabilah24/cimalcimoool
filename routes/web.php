@@ -42,3 +42,10 @@ Route::post('/login', [UserController::class, 'login_action']);
 //register
 Route::get('/register', [UserController::class, 'register']);
 Route::post('/register', [UserController::class, 'register_action']);
+
+// logout
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+
+//forgotpassword
+Route::get('/forgotpassword', [UserController::class,'showLinkRequestForm'])->name('password.request');
+Route::post('/forgotpassword', [UserController::class,'sendResetLinkEmail'])->name('password.email');

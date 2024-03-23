@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
@@ -64,14 +65,42 @@ class UserController extends Controller
 
         if(Auth::attempt($infologin)){
             if(Auth::user()->role =='admin'){
-                return redirect('admin.menu');
+                return redirect('dashboard');
             } elseif (Auth::user()->role == 'user'){
                 return redirect('home');
             }
         }else{
             return redirect('')->withErrors('Username Atau Password Yang Dimasukkan Tidak Sesuai')->withInput();
         }
+    }
+    //logout
+    function logout(){
+        Auth::logout();
+        return redirect('');
+    }
 
+    //FUNGSI LUPA PASSWORD
+    public function showLinkRequestForm()
+    {
+         return view('forgotpassword');
+    }
+
+    public function sendResetLinkEmail(Request $request)
+    {
+         set_time_limit(1000);
+
+         $request->validate(['email' => 'required|email']);
+
+         $user = User::where('email', $request->email)->first();
+
+         $status = Password::sendResetLink(
+             $request->only('email')
+         );
+
+         return $status === Password::RESET_LINK_SENT
+             ? back()->with('status', __($status))
+             : back()->withErrors(['email' => __($status)]);
+    }
 
 
         // if (Auth::attempt(['email' => $request->username, 'password' => $request->password])) {
@@ -83,6 +112,6 @@ class UserController extends Controller
         // }
 
         // return back()->withErrors('Invalid username or password.');
-    }
+
 
 }
