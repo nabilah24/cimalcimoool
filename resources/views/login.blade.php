@@ -43,7 +43,7 @@
                   <span class="show">SHOW</span>
                </div>
                <div class="pass">
-                  <a href="{{ url('forgot.password') }}">Forgot Password?</a>
+                  <a href="{{ url('forgotpassword') }}">Forgot Password?</a>
                </div>
                <div class="field">
                   <input type="submit" value="LOGIN">
@@ -78,7 +78,7 @@
         Swal.fire('{{ $message }}');
     </script>
     @endif
-    
+
     @if($message = Session::get('success'))
     <script>
         Swal.fire('{{ $message }}');

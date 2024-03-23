@@ -13,7 +13,6 @@
     <div class="bg-img ">
         <div class="content">
             <header>LUPA PASSWORD</header>
-            <h3>Kami akan mengirimkan link untuk reset password</h3>
             <div class="card-body">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -21,19 +20,22 @@
                     </div>
                 @endif
 
-                @if ($errors->has('email'))
+                {{-- @if ($errors->has('email'))
                     <div class="alert alert-danger" role="alert">
                         {{ $errors->first('email') }}
                     </div>
-                @endif
+                @endif --}}
             </div>
             <div class="container">
-                <form method="POST" action="/password.email">
+                <form method="POST" action="/forgotpassword-act">
                     @csrf
                     <div class="field col-md-4">
                         <span class="fa fa-user"></span>
-                        <input type="email" required placeholder="Email" name="email" class="form-control @error('email') is-invalid @enderror" autofocus>
+                        <input type="email" required placeholder="Email Terdaftar" name="email" class="form-control @error('email') is-invalid @enderror" autofocus>
                     </div>
+                    @error('email')
+                        <small> {{ $message }}</small>
+                    @enderror
                     <br>
                     <div class="field">
                         <input type="submit" class="submit" value="Send link">

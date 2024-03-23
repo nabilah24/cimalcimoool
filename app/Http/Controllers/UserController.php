@@ -82,24 +82,33 @@ class UserController extends Controller
     //FUNGSI LUPA PASSWORD
     public function showLinkRequestForm()
     {
-         return view('forgotpassword');
+         return view('forgot-password');
     }
 
     public function sendResetLinkEmail(Request $request)
     {
-         set_time_limit(1000);
+        set_time_limit(1000);
+        $customeMessage = [
+            'email.required'  => 'Email tidak boleh kosong',
+            'email.email'       => 'Email tidak valid',
+            'email.exists'      => 'Email tidak terdaftar di database',
+        ];
 
-         $request->validate(['email' => 'required|email']);
+        $request->validate(['email' => 'required|email|exists:users,email']);
 
-         $user = User::where('email', $request->email)->first();
+        $data = [
+            'email' => $request->email
+        ];
 
-         $status = Password::sendResetLink(
-             $request->only('email')
-         );
+        // $user = User::where('email', $request->email)->first();
 
-         return $status === Password::RESET_LINK_SENT
-             ? back()->with('status', __($status))
-             : back()->withErrors(['email' => __($status)]);
+        // $status = Password::sendResetLink(
+        //     $request->only('email')
+        //  );
+
+        // return $status === Password::RESET_LINK_SENT
+        //     ? back()->with('status', __($status))
+        //     : back()->withErrors(['email' => __($status)]);
     }
 
 
