@@ -55,5 +55,6 @@ Route::post('/forgotpassword-act', [UserController::class,'sendResetLinkEmail'])
 Route::get('/profile', function () {
     $user = Auth::user();
     return view('profile', ['user' => $user]);
-})->middleware('auth');
+})->middleware('auth')->name('profile');
+
 

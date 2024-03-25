@@ -65,8 +65,11 @@
                             <i class="bi bi-person-circle"></i><span></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item {{ '/' == request()->path() ? 'active' : '' }}"
-                                    href="{{ url('/') }}">Profil</span></a></li>
+                            <li>
+                                <a class="dropdown-item {{ Request::is('profile') ? 'active' : '' }}"
+                                   href="{{ route('profile') }}">Profil</a>
+                            </li>
+
                             <li><a class="dropdown-item {{ '/' == request()->path() ? 'active' : '' }}"
                                     href="{{ route('logout') }}">Logout<span></span></a></li>
                     </li>
