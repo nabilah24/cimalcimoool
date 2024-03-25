@@ -5,6 +5,8 @@ use App\Http\Controllers\AllController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CartController;
+use Illuminate\Support\Facades\Auth;
+
 use App\Models\All;
 use App\Models\Login;
 use App\Models\Menu;
@@ -49,3 +51,9 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 //forgotpassword
 Route::get('/forgot-password', [UserController::class,'showLinkRequestForm'])->name('forgot-password');
 Route::post('/forgotpassword-act', [UserController::class,'sendResetLinkEmail'])->name('forgotpassword-act');
+
+Route::get('/profile', function () {
+    $user = Auth::user();
+    return view('profile', ['user' => $user]);
+})->middleware('auth');
+
