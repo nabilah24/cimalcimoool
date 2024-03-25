@@ -20,7 +20,8 @@
         <!-- Anda bisa menambahkan lebih banyak detail profil di sini -->
 
         <!-- Tombol untuk menuju halaman update profil -->
-        <a href="{{ route('updateprofile') }}" class="update-button">Update Profil</a>
+        {{--  <a href="{{ route('/') }}" class="update-button">Update Profil</a>  --}}
+        <button class="update-button">Update Profil</button>
     </div>
 </body>
 </html>
