@@ -1123,3 +1123,123 @@ i span {
     text-decoration: underline;
 }
 
+/* profil */
+
+/* Gaya untuk elemen body */
+.profile-body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #800020; /* Mengubah warna latar belakang menjadi #800020 */
+    color: #333;
+    padding: 20px;
+}
+
+/* Gaya untuk elemen h1 */
+.profile-h1 {
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Gaya untuk elemen div.profile-info */
+.profile-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk elemen div.profile-info p */
+.profile-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Gaya untuk elemen strong dalam div.profile-info */
+.profile-info strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Gaya untuk link */
+.profile-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-link:hover {
+    text-decoration: underline;
+}
+
+/* Gaya untuk panah kembali */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-arrow img {
+    width: 30px; /* Ukuran panah kembali */
+    height: auto;
+}
+
+        /* Gaya untuk tombol update profil */
+        .update-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .update-button:hover {
+            background-color: #0056b3;
+        }
+
+
+/* File: public/css/updateprofile.css */
+
+/* Gaya untuk form */
+.updateprof-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.updateprof-form .form-group {
+    margin-bottom: 20px;
+}
+
+.updateprof-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.updateprof-form .form-group input[type="text"],
+.updateprof-form .form-group input[type="email"],
+.updateprof-form .form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.updateprof-form .form-group button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.updateprof-form .form-group button:hover {
+    background-color: #0056b3;
+}

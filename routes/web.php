@@ -6,6 +6,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProfileController;
+
 
 use App\Models\All;
 use App\Models\Login;
@@ -56,5 +58,13 @@ Route::get('/profile', function () {
     $user = Auth::user();
     return view('profile', ['user' => $user]);
 })->middleware('auth')->name('profile');
+
+
+// Route::get('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile');
+// Route::post('/updateprofile', 'ProfileController@updateProfileSubmit')->name('updateprofile.submit');
+
+// Route::get('/profile', 'ProfileController@showProfile')->name('profile');
+// Route::get('/updateprofile', 'ProfileController@showUpdateProfile')->name('updateprofile');
+// Route::post('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile.submit');
 
 
