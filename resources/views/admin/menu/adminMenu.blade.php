@@ -17,8 +17,8 @@
             </div>
         </div>
 
-        <div class="user-data">
-            <div class="user">
+        <div class="table-data">
+            <div class="order">
                 <div class="head">
                     <a href="{{ route('adminMenu.create') }}"><i class='bx bx-plus'></i></a>
                     <i class='bx bx-filter'></i>

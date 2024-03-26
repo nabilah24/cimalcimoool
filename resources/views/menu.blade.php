@@ -55,14 +55,16 @@
                 <div id="tab-1" class="tab-pane fade show p-0 active">
                     <div class="row g-4">
                         @foreach ($menus as $menu)
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="menu-item card rounded">
                                     <div class="position-relative bg-light overflow-hidden">
                                         <div class="menu-item-content mx-auto">
                                             <div
                                                 class="menu-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                                 <div class="menu-item-caption-content text-center text-white">
-                                                    <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#menuModal{{ $menu->id }}"><i class="bi bi-eye-fill"></i></a>&nbsp
+                                                    <a href="" class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#menuModal{{ $menu->id }}"><i
+                                                            class="bi bi-eye-fill"></i></a>&nbsp
                                                     <a href="{{ route('addmenu.to.cart', $menu->id) }}" class="btn"><i
                                                             class="bi bi-cart-fill"></i></a>
                                                 </div>
@@ -82,9 +84,9 @@
                     </div>
                 </div>
                 <div id="tab-2" class="tab-pane fade show p-0">
-                    <div class="card mb-3 menu-list" style="max-width: 100%;">
-                        <div class="row g-0">
-                            @foreach ($menus as $menu)
+                    @foreach ($menus as $menu)
+                        <div class="card mb-3 menu-list" style="max-width: 100%;">
+                            <div class="row g-0">
                                 <div class="col-md-4">
                                     <a href="" class="menu-thumbnail">
                                         <img src="{{ asset('/storage/gambar/' . $menu->gambar) }}"
@@ -100,53 +102,53 @@
                                         <p class="card-text text-body"> {{ $menu->deskripsi }}</p>
                                     </div>
                                 </div>
-                                <span class="icon-chart">
+                                <div class="icon-chart">
                                     <a href="{{ route('addmenu.to.cart', $menu->id) }}"><i class="bi bi-cart-fill"></i></a>
-                                </span>
-                            @endforeach
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="overflow-hidden">
-                        <hr class="hr-short border-black" data-zanim-xs='{"duration":1.5,"delay":0.2}' />
-                    </div>
+                        <div class="overflow-hidden">
+                            <hr class="hr-short border-black" data-zanim-xs='{"duration":1.5,"delay":0.2}' />
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
     {{-- menu end --}}
 
-
-{{-- menu-item-modals --}}
-@foreach ($menus as $menu)
-<div class="menu-modal modal fade" id="menuModal{{ $menu->id }}" tabindex="-1" aria-labelledby="menuModal{{ $menu->id }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content" style="background: var(--light)">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center pb-5">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6">
-                            <img src="{{ asset('/storage/gambar/' . $menu->gambar) }}" alt=""
-                                class="img-fluid rounded mb-5" width="200px">
-                            <div class="text-center p-4">
-                                <a href="" class="d-block h3 mb-2 text-decoration-none"><b>Cimol</b></a>
-                                <span class="me-1">Rp {{ $menu->harga}}</span>
+    {{-- menu-item-modals --}}
+    @foreach ($menus as $menu)
+        <div class="menu-modal modal fade" id="menuModal{{ $menu->id }}" tabindex="-1"
+            aria-labelledby="menuModal{{ $menu->id }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="background: var(--light)">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <img src="{{ asset('/storage/gambar/' . $menu->gambar) }}" alt=""
+                                        class="img-fluid rounded mb-5" width="200px">
+                                    <div class="text-center p-4">
+                                        <a href="" class="d-block h3 mb-2 text-decoration-none"><b>Cimol</b></a>
+                                        <span class="me-1">Rp
+                                            {{ $menu->harga }}</span>
+                                    </div>
+                                    <h5>Deskripsi :</h5>
+                                    <p class="mb-4">{{ $menu->deskripsi }}</p>
+                                    <a href="{{ route('addmenu.to.cart', $menu->id) }}"
+                                        class="btn btn-outline-primary align-items-center justify-content-center"><i
+                                            class="bi bi-cart-fill"></i>Add to Chart</a>
+                                </div>
                             </div>
-                            <h5>Deskripsi :</h5>
-                            <p class="mb-4">{{ $menu->deskripsi }}</p>
-                            <a href="{{ route('addmenu.to.cart', $menu->id )}}"
-                                class="btn btn-outline-primary align-items-center justify-content-center"><i
-                                    class="bi bi-cart-fill"></i>Add to Chart</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-@endforeach
-{{-- menu-item-modals --}}
-
-{{-- @endsection --}}
+    @endforeach
+    {{-- menu-item-modals --}}
+@endsection
