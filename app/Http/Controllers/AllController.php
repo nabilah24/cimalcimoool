@@ -16,12 +16,12 @@ class AllController extends Controller
     }
     public function home()
     {
-        return view('home');
+        return view('weUtama.home');
     }
 
     public function about()
     {
-        return view('about');
+        return view('weUtama.about');
     }
 
     public function menu()
@@ -30,12 +30,12 @@ class AllController extends Controller
         $menus = Menu::all(); // Assuming you want to fetch all menus
 
         // Pass menus and users data to the view
-        return view('menu', compact('menus'));
+        return view('weUtama.menu', compact('menus'));
     }
 
     public function contact()
     {
-        return view('contact');
+        return view('weUtama.contact');
     }
 
     public function adminMenu()
@@ -70,12 +70,18 @@ class AllController extends Controller
         return view('admin.maps');
     }
 
+    public function profile()
+    {
+        $user = user::all();
+        return view('weUtama.profile', compact('user'));
+    }
+
     public function userProfile()
     {
         // Fetch users from the database
-        $users = User::all(); // Assuming you want to fetch all users
+        $user = User::all(); // Assuming you want to fetch all users
 
         // Pass menus and users data to the view
-        return view('admin.user.userProfile', compact('users'));
+        return view('admin.user.userProfile', compact('user'));
     }
 }

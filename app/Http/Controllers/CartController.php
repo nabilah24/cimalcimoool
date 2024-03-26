@@ -10,12 +10,12 @@ class CartController extends Controller
     public function index()
     {
         $menus = Menu::all();
-        return view('menu', compact('menus'));
+        return view('weUtama.menu', compact('menus'));
     }
 
     public function menuCart()
     {
-        return view('cart');
+        return view('weUtama.cart');
     }
 
     public function addMenutoCart($id)

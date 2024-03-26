@@ -40,7 +40,7 @@ Route::resource('/adminMenu', MenuController::class);
 
 
 // login
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/login', [UserController::class, 'login_action']);
 
 //register
