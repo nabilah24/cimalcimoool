@@ -96,7 +96,7 @@
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>
                     <p class="mb-2"><i class="bi bi-geo-alt-fill me-3"></i>Jl. Dewandaru No.7 Malang</p>
                     <p class="mb-2"><i class="bi bi-telephone-fill me-3"></i>+62 898-3550-049</p>
-                    <p class="mb-2"><i class="bi bi-envelope-fill me-3"></i>icimalcimoool@gmail.com</p>
+                    <p class="mb-2"><i class="bi bi-envelope-fill me-3"></i>cimalcimoool@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="bi bi-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="bi bi-tiktok"></i></a>

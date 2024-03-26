@@ -136,6 +136,7 @@ nav.solid {
 .section-title {
     position: relative;
     display: inline-block;
+    color: var(--dark);
 }
 
 .section-title::before {

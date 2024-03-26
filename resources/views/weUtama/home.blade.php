@@ -25,7 +25,7 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
-                            <a href="https://g.co/kgs/z5gqR3H" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
+                            <a href="https://maps.app.goo.gl/9KmycXGWo85YwLQg8" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
                             <div class="p-4 text-center">
                                 <h5><img class="img-fluid flex-shrink-0 rounded-circle"
                                         src="{{ asset('assets/images/information/outlet.png') }}" alt=""width="70px"
@@ -80,7 +80,7 @@
     {{-- information end --}}
 
     {{-- about --}}
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5 about">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
@@ -103,17 +103,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h3 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h3>
-                    <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Restoran</h1>
+                <div class="col-lg-6 text-black">
+                    <h3 class="section-title ff-secondary text-start fw-normal">About Us</h3>
+                    <h1 class="mb-4">Welcome to Cimal Cimol<i class="bi bi-emoji-heart-eyes-fill me-2" style="color: var(--dark)"></i></h1>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                         eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                         eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
+                            <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                                <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)" data-toggle="counter-up">15</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Years of</p>
                                     <h6 class="text-uppercase mb-0">Experience</h6>
@@ -121,8 +121,8 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                            <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                                <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)"  data-toggle="counter-up">50</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Popular</p>
                                     <h6 class="text-uppercase mb-0">Master Chefs</h6>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                    <a class="btn py-3 px-5 mt-2 text-white" style="background: var(--dark)" href="/about">Read More</a>
                 </div>
             </div>
         </div>
@@ -142,11 +142,11 @@
         <div class="row g-0">
             <div class="col-md-6">
                 <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <h3 class="section-title ff-secondary text-start text-primary fw-normal">Information</h3>
+                    <h3 class="section-title ff-secondary text-start fw-normal" style="color: var(--primary)">Information</h3>
                     <h1 class="text-white mb-4">Let's Join Us!</h1>
                     <h2 class="text-center">We Are Hiring</h2>
                     <center>
-                        <h1 class="badge text-bg-primary text-center text-wrap" style="font-size: 2em; padding:10px 20px">
+                        <h1 class="badge text-center text-wrap" style="font-size: 2em; padding:10px 20px; background-color: var(--primary)">
                             Booth <br> Crew</h1>
                     </center>
                     <div class="col-12">
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cimalcimoool@gmail.com" class="btn w-100 py-3" target="_blank" style="background: var(--primary)">Send Your CV</a>
                     </div>
                 </div>
             </div>
@@ -178,8 +178,8 @@
     {{-- tranding menu --}}
     <section id="tranding">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h3 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h3>
-            <h1 class="mb-5">Most Popular Items</h1>
+            <h3 class="section-title ff-secondary text-center fw-normal">Food Menu</h3>
+            <h1 class="mb-5 text-black">Most Popular Items</h1>
         </div>
         <div class="container tranding-container">
             <div class="swiper tranding-slider">
@@ -417,7 +417,7 @@
             <div class="row">
                 <div class="col text-center mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h3 class="section-title ff-secondary text-center text-primary fw-normal">Find Us</h3>
+                        <h3 class="section-title ff-secondary text-center fw-normal">Find Us</h3>
                     </div>
                 </div>
             </div>

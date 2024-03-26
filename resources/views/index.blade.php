@@ -6,11 +6,14 @@
         <div class="container my-5 py-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-3 animated slideInLeft" style="color: #000000; text-shadow: 2px 2px 4px #ffb75d;">Enjoy Our Delicious Meal</h1>
+                    <h1 class="display-3 animated slideInLeft" style="color: #000000; text-shadow: 2px 2px 4px #ffb75d;">Enjoy
+                        Our Delicious Meal</h1>
                     {{--  <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Tempor erat elitr rebum at clita. Diam dolor diam
                         ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita
                         duo justo magna dolore erat amet</p>  --}}
-                        <a href="{{ url('/register') }}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" style="background-color: #800020; border-color: #000000; color: #ffb75d; text-shadow: 2px 2px 4px #ffb75d;">Registrasion Now</a>
+                    <a href="{{ url('/register') }}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft"
+                        style="background-color: #800020; border-color: #000000; color: #ffb75d; text-shadow: 2px 2px 4px #ffb75d;">Registrasion
+                        Now</a>
                 </div>
 
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
@@ -28,52 +31,56 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
-                            <a href="https://g.co/kgs/z5gqR3H" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4 text-center">
-                                <h5><img class="img-fluid flex-shrink-0 rounded-circle"
-                                        src="{{ asset('assets/images/information/outlet.png') }}" alt=""width="70px"
-                                        height="70px">&nbsp; <b>Outlet</b></h5>
-                                <p>Jl. Dewandaru No.7 Malang</p>
-                            </div>
+                            <a href="https://maps.app.goo.gl/9KmycXGWo85YwLQg8" target="_blank" rel="noopener noreferrer"
+                                style="color: black; text-decoration: none;">
+                                <div class="p-4 text-center">
+                                    <h5><img class="img-fluid flex-shrink-0 rounded-circle"
+                                            src="{{ asset('assets/images/information/outlet.png') }}"
+                                            alt=""width="70px" height="70px">&nbsp; <b>Outlet</b></h5>
+                                    <p>Jl. Dewandaru No.7 Malang</p>
+                                </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
-                            <a href="https://gofood.link/a/KLgpw5k" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4 text-center">
-                                <h5><img class="img-fluid flex-shrink-0 rounded-circle"
-                                        src="{{ asset('assets/images/information/gofood.png') }}" alt=""width="70px"
-                                        height="70px">&nbsp;<b>Go Food</b></h5>
-                                <p>Cimal Cimol, Lowokwaru</p>
-                            </div>
+                            <a href="https://gofood.link/a/KLgpw5k" target="_blank" rel="noopener noreferrer"
+                                style="color: black; text-decoration: none;">
+                                <div class="p-4 text-center">
+                                    <h5><img class="img-fluid flex-shrink-0 rounded-circle"
+                                            src="{{ asset('assets/images/information/gofood.png') }}"
+                                            alt=""width="70px" height="70px">&nbsp;<b>Go Food</b></h5>
+                                    <p>Cimal Cimol, Lowokwaru</p>
+                                </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
-                            <a href="https://r.grab.com/g/6-20240312_162107_abee3d6021eeb716_MEXMPS-6-C2B3MCN2VKXXHE" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4 text-center">
-                                <h5><img class="img-fluid flex-shrink-0 rounded-circle"
-                                        src="{{ asset('assets/images/information/grabfood.png') }}"
-                                        alt=""width="70px" height="70px">&nbsp;<b>Grab Food</b></h5>
-                                <p>Cimal Cimol - Jatimulyo</p>
-                            </div>
+                            <a href="https://r.grab.com/g/6-20240312_162107_abee3d6021eeb716_MEXMPS-6-C2B3MCN2VKXXHE"
+                                target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
+                                <div class="p-4 text-center">
+                                    <h5><img class="img-fluid flex-shrink-0 rounded-circle"
+                                            src="{{ asset('assets/images/information/grabfood.png') }}"
+                                            alt=""width="70px" height="70px">&nbsp;<b>Grab Food</b></h5>
+                                    <p>Cimal Cimol - Jatimulyo</p>
+                                </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <a class="text-decoration-none">
                         <div class="information-item rounded pt-3">
-                            <a href="https://shopee.co.id/universal-link/now-food/shop/1283940?deep_and_deferred=1&shareChannel=copy_link" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
-                            <div class="p-4 text-center">
-                                <h5><img class="img-fluid flex-shrink-0 rounded-circle"
-                                        src="{{ asset('assets/images/information/shopee.png') }}" alt=""width="70px"
-                                        height="70px">&nbsp;<b>Shopee Food</b></h5>
-                                <p>Cimal Cimol - Lowokwaru</p>
-                            </div>
+                            <a href="https://shopee.co.id/universal-link/now-food/shop/1283940?deep_and_deferred=1&shareChannel=copy_link"
+                                target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">
+                                <div class="p-4 text-center">
+                                    <h5><img class="img-fluid flex-shrink-0 rounded-circle"
+                                            src="{{ asset('assets/images/information/shopee.png') }}"
+                                            alt=""width="70px" height="70px">&nbsp;<b>Shopee Food</b></h5>
+                                    <p>Cimal Cimol - Lowokwaru</p>
+                                </div>
                         </div>
                     </a>
                 </div>
@@ -83,7 +90,7 @@
     {{-- information end --}}
 
     {{-- about --}}
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5 about">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
@@ -106,16 +113,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h3 class="display-3 animated slideInLeft" style="color: #000000; text-shadow: 2px 2px 4px #ffb75d;">About Us</h3>
-                    <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                <div class="col-lg-6 text-black">
+                    <h3 class="section-title ff-secondary text-start fw-normal">About Us</h3>
+                    <h1 class="mb-4">Welcome to Cimal Cimol<i class="bi bi-emoji-heart-eyes-fill me-2"
+                            style="color: var(--dark)"></i></h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                         eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-                    <p class="animated slideInLeft mb-4 pb-2" style="color: #000000;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                         eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
+                            <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                                <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)"
+                                    data-toggle="counter-up">15</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Years of</p>
                                     <h6 class="text-uppercase mb-0">Experience</h6>
@@ -123,8 +133,9 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                            <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                                <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)"
+                                    data-toggle="counter-up">50</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Popular</p>
                                     <h6 class="text-uppercase mb-0">Master Chefs</h6>
@@ -132,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                    <a class="btn py-3 px-5 mt-2 text-white" style="background: var(--dark)" href="/about">Read More</a>
                 </div>
             </div>
         </div>
@@ -144,11 +155,13 @@
         <div class="row g-0">
             <div class="col-md-6">
                 <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <h3 class="section-title ff-secondary text-start text-primary fw-normal">Information</h3>
+                    <h3 class="section-title ff-secondary text-start fw-normal" style="color: var(--primary)">Information
+                    </h3>
                     <h1 class="text-white mb-4">Let's Join Us!</h1>
                     <h2 class="text-center">We Are Hiring</h2>
                     <center>
-                        <h1 class="badge text-bg-primary text-center text-wrap" style="font-size: 2em; padding:10px 20px">
+                        <h1 class="badge text-center text-wrap"
+                            style="font-size: 2em; padding:10px 20px; background-color: var(--primary)">
                             Booth <br> Crew</h1>
                     </center>
                     <div class="col-12">
@@ -163,7 +176,8 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cimalcimoool@gmail.com"
+                            class="btn w-100 py-3" target="_blank" style="background: var(--primary)">Send Your CV</a>
                     </div>
                 </div>
             </div>
@@ -180,8 +194,8 @@
     {{-- tranding menu --}}
     <section id="tranding">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h3 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h3>
-            <h1 class="mb-5">Most Popular Items</h1>
+            <h3 class="section-title ff-secondary text-center fw-normal">Food Menu</h3>
+            <h1 class="mb-5 text-black">Most Popular Items</h1>
         </div>
         <div class="container tranding-container">
             <div class="swiper tranding-slider">
@@ -378,7 +392,9 @@
                 <div class="slide swiper-slide">
                     <i class="bi bi-quote"></i>
                     <p>
-                        Makanan ringan dari Cimalcimol adalah pilihan terbaik untuk memuaskan selera. Cimol dan aci gulung mereka selalu renyah dan lezat. Varian lainnya seperti makaroni dan basreng juga tidak kalah menggugah selera. Terima kasih Cimalcimol, sudah menyajikan camilan terbaik!
+                        Makanan ringan dari Cimalcimol adalah pilihan terbaik untuk memuaskan selera. Cimol dan aci gulung
+                        mereka selalu renyah dan lezat. Varian lainnya seperti makaroni dan basreng juga tidak kalah
+                        menggugah selera. Terima kasih Cimalcimol, sudah menyajikan camilan terbaik!
                     </p>
                     <div class="details">
                         <span class="name">Talitha Najwa</span>
@@ -388,7 +404,9 @@
                 <div class="slide swiper-slide">
                     <i class="bi bi-quote"></i>
                     <p>
-                        Cimalcimol selalu menjadi solusi ketika saya ingin camilan yang nikmat dan memuaskan. Dari cimol hingga basreng, semuanya memiliki rasa yang enak dan tekstur yang pas. Terima kasih Cimalcimol, sudah menjadi teman setia saat lapar!
+                        Cimalcimol selalu menjadi solusi ketika saya ingin camilan yang nikmat dan memuaskan. Dari cimol
+                        hingga basreng, semuanya memiliki rasa yang enak dan tekstur yang pas. Terima kasih Cimalcimol,
+                        sudah menjadi teman setia saat lapar!
                     </p>
                     <div class="details">
                         <span class="name">Rizky Puspita</span>
@@ -398,7 +416,9 @@
                 <div class="slide swiper-slide">
                     <i class="bi bi-quote"></i>
                     <p>
-                        Rasa camilan dari Cimalcimol tidak pernah mengecewakan. Cimol, aci gulung, dan makaroni mereka selalu menjadi pilihan favorit saya. Dorodok dan basreng juga tidak kalah lezat. Terima kasih Cimalcimol, telah menyediakan camilan yang sempurna!
+                        Rasa camilan dari Cimalcimol tidak pernah mengecewakan. Cimol, aci gulung, dan makaroni mereka
+                        selalu menjadi pilihan favorit saya. Dorodok dan basreng juga tidak kalah lezat. Terima kasih
+                        Cimalcimol, telah menyediakan camilan yang sempurna!
                     </p>
                     <div class="details">
                         <span class="name">Satria Baja Hitam</span>
@@ -419,15 +439,15 @@
             <div class="row">
                 <div class="col text-center mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h3 class="section-title ff-secondary text-center text-primary fw-normal">Find Us</h3>
+                        <h3 class="section-title ff-secondary text-center fw-normal">Find Us</h3>
                     </div>
                 </div>
             </div>
             <div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4894405374253!2d112.62180907443569!3d-7.948266579182089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629d96cb83ab3%3A0xaf7f420d67935f0c!2sJl.%20Dewandaru%20No.7%2C%20Jatimulyo%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065141!5e0!3m2!1sid!2sid!4v1709088591891!5m2!1sid!2sid"
-                    width="100%" height="270px" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    width="100%" height="270px" style="border:0; border-radius: 6px;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
