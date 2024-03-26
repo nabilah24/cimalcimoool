@@ -19,18 +19,38 @@
                 <div class="field">
                     <span class="fa fa-user"></span>
                     <input type="username" required placeholder="Username" name="username" id="username" value="{{old('username')}}">
+                    @error('username')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div class="field">
                     <span class="fa fa-user"></span>
                     <input type="text" required placeholder="Nama" name="name" id="name" value="{{old('name')}}">
+                    @error('name')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div class="field">
                     <span class="fa fa-user"></span>
                     <input type="email" required placeholder="Email" name="email" id="email" value="{{old('email')}}">
+                    @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                <div class="field">
                   <span class="fa fa-user"></span>
                   <input type="string" required placeholder="Phone" name="phone" id="phone" value="{{old('phone')}}">
+                  @error('phone')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                  @enderror
                </div>
                <div class="field space">
                   <span class="fa fa-lock"></span>
