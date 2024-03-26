@@ -55,10 +55,6 @@
                         <a class="nav-link {{ 'contact' == request()->path() ? 'active' : '' }}"
                             href="/login">CONTACT<span></span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ '/login' == request()->path() ? 'active' : '' }}" href=""><i
-                                class="bi bi-cart-fill"></i><span></span></a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link {{ 'tutorial/bhsisyarat' == request()->path() || 'tutorial/musik' == request()->path() || 'tutorial/tari' == request()->path() || 'tutorial/gambar' == request()->path() ? 'active' : '' }}"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
