@@ -115,17 +115,14 @@
                 </div>
                 <div class="col-lg-6 text-black">
                     <h3 class="section-title ff-secondary text-start fw-normal">About Us</h3>
-                    <h1 class="mb-4">Welcome to Cimal Cimol<i class="bi bi-emoji-heart-eyes-fill me-2"
+                    <h1 class="mb-4">Welcome to Cimal Cimol<i class="bi me-2"
                             style="color: var(--dark)"></i></h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p class="mb-4">Cimalcimol adalah destinasi utama untuk menemukan berbagai macam makanan ringan khas Indonesia yang lezat dan unik. Dari cimol, cibak, aci, seblak, bojot, hingga makaroni, kami menawarkan berbagai varian produk yang memanjakan lidah dan menjelajahi kekayaan kuliner Indonesia. Di Cimalcimol, kami bangga menyajikan produk berkualitas tinggi yang dibuat dengan cinta dan dedikasi, menggunakan bahan-bahan pilihan serta proses produksi yang terjaga kualitasnya. Bergabunglah dengan kami di Cimalcimol dan temukan pengalaman berbelanja yang tak terlupakan!</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-warning px-3">
                                 <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)"
-                                    data-toggle="counter-up">15</h1>
+                                    data-toggle="counter-up">3</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Years of</p>
                                     <h6 class="text-uppercase mb-0">Experience</h6>
@@ -135,10 +132,10 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-warning px-3">
                                 <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)"
-                                    data-toggle="counter-up">50</h1>
+                                    data-toggle="counter-up">20</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Popular</p>
-                                    <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                    <h6 class="text-uppercase mb-0">Menu's</h6>
                                 </div>
                             </div>
                         </div>

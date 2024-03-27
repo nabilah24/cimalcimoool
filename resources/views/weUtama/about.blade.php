@@ -53,15 +53,16 @@
                     <h3 class="section-title ff-secondary text-start fw-normal">About Us</h3>
                     <h1 class="mb-4">Welcome to Cimal Cimol<i class="bi bi-emoji-heart-eyes-fill me-2"
                             style="color: var(--dark)"></i></h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p class="mb-4">Selamat datang di Cimalcimol, tempatnya mencari dan menemukan berbagai macam makanan ringan khas Indonesia yang lezat dan menggugah selera. Kami bangga menjadi salah satu penyedia terkemuka produk makanan ringan di Indonesia, menghadirkan pengalaman kuliner yang unik dan tak terlupakan bagi pelanggan kami.</p>
+                    <p class="mb-4">Di Cimalcimol, kami berkomitmen untuk memberikan produk berkualitas tinggi dengan rasa yang autentik dan inovatif. Setiap produk kami dibuat dengan cinta dan dedikasi, menggunakan bahan-bahan pilihan dan proses produksi yang terjaga kualitasnya. Dari cimol, cibak, aci, seblak, bojot, hingga makaroni, kami menawarkan berbagai varian yang memanjakan lidah dan menjelajahi kekayaan kuliner Indonesia.</p>
+                    <p class="mb-4">Kami tidak hanya menjual makanan ringan, tetapi juga menghadirkan sebuah pengalaman. Cimalcimol adalah lebih dari sekadar sebuah merek; kami adalah cermin dari keberagaman, kreativitas, dan kehangatan budaya Indonesia. Kami percaya bahwa setiap gigitan adalah sebuah petualangan, dan setiap produk yang kami tawarkan membawa cerita dan kegembiraan.</p>
+                    <p class="mb-4">Kami berterima kasih kepada seluruh pelanggan dan mitra kami yang telah mendukung perjalanan kami. Kami berjanji untuk terus berinovasi dan memberikan yang terbaik bagi Anda. Bergabunglah dengan kami di Cimalcimol, dan mari bersama-sama menikmati kelezatan dan keindahan kuliner Indonesia.</p>
+                    <p class="mb-4">Terima kasih atas kunjungan Anda dan selamat menikmati pengalaman berbelanja di Cimalcimol!</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-warning px-3">
                                 <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)"
-                                    data-toggle="counter-up">15</h1>
+                                    data-toggle="counter-up">3</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Years of</p>
                                     <h6 class="text-uppercase mb-0">Experience</h6>
@@ -71,10 +72,10 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-warning px-3">
                                 <h1 class="flex-shrink-0 display-5 mb-0" style="color: var(--dark)"
-                                    data-toggle="counter-up">50</h1>
+                                    data-toggle="counter-up">20</h1>
                                 <div class="ps-4">
                                     <p class="mb-0">Popular</p>
-                                    <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                    <h6 class="text-uppercase mb-0">Menu's</h6>
                                 </div>
                             </div>
                         </div>
