@@ -205,7 +205,7 @@
                         <div class="tranding-slide-content">
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="food-name">
-                                    Special Pizza
+                                    Cimol Ori
                                 </h2>
                                 <h3 class="food-rating">
                                     <span>4.5</span>
@@ -229,7 +229,7 @@
                         <div class="tranding-slide-content">
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="food-name">
-                                    Meat Ball
+                                    Cibak Ori
                                 </h2>
                                 <h3 class="food-rating">
                                     <span>4.5</span>
@@ -253,7 +253,7 @@
                         <div class="tranding-slide-content">
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="food-name">
-                                    Burger
+                                    Cimol Banjir
                                 </h2>
                                 <h3 class="food-rating">
                                     <span>4.5</span>
@@ -277,7 +277,7 @@
                         <div class="tranding-slide-content">
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="food-name">
-                                    Frish Curry
+                                    Sambel Bojot
                                 </h2>
                                 <h3 class="food-rating">
                                     <span>4.5</span>
@@ -301,7 +301,7 @@
                         <div class="tranding-slide-content">
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="food-name">
-                                    Pane Cake
+                                    Aci Gulung
                                 </h2>
                                 <h3 class="food-rating">
                                     <span>4.5</span>
@@ -325,7 +325,7 @@
                         <div class="tranding-slide-content">
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="food-name">
-                                    Vanilla cake
+                                    Makaroni
                                 </h2>
                                 <h3 class="food-rating">
                                     <span>4.5</span>
@@ -349,7 +349,7 @@
                         <div class="tranding-slide-content">
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="food-name">
-                                    Straw Cake
+                                    Dorodok Pedas
                                 </h2>
                                 <h3 class="food-rating">
                                     <span>4.5</span>
