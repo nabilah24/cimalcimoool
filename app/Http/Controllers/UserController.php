@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-
 
 class UserController extends Controller
 {
-
     public function register()
     {
         return view('register');
@@ -25,7 +22,7 @@ class UserController extends Controller
             'username' => 'required|min:6|max:20|unique:users',
             'email' => 'required|email|unique:users',
             'phone' => 'required|string|min:12|max:13',
-            'password' => 'required|min:6|max:8'
+            'password' => 'required|min:6|max:8',
         ]);
 
         $user = new User([
@@ -74,30 +71,32 @@ class UserController extends Controller
     }
 
     //logout
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
+
         return redirect('/')->with('success', 'Anda berhasil logout!!');
     }
 
     //FUNGSI LUPA PASSWORD
     public function showLinkRequestForm()
     {
-         return view('forgot-password');
+        return view('forgot-password');
     }
 
     public function sendResetLinkEmail(Request $request)
     {
         set_time_limit(1000);
         $customeMessage = [
-            'email.required'  => 'Email tidak boleh kosong',
-            'email.email'       => 'Email tidak valid',
-            'email.exists'      => 'Email tidak terdaftar di database',
+            'email.required' => 'Email tidak boleh kosong',
+            'email.email' => 'Email tidak valid',
+            'email.exists' => 'Email tidak terdaftar di database',
         ];
 
         $request->validate(['email' => 'required|email|exists:users,email']);
 
         $data = [
-            'email' => $request->email
+            'email' => $request->email,
         ];
 
         // $user = User::where('email', $request->email)->first();
@@ -111,16 +110,14 @@ class UserController extends Controller
         //     : back()->withErrors(['email' => __($status)]);
     }
 
+    // if (Auth::attempt(['email' => $request->username, 'password' => $request->password])) {
+    //     if (auth()->user()->is_admin == 1) {
+    //         return redirect()->intended('/musik');
+    //     } else {
+    //         return redirect()->intended('/home');
+    //     }
+    // }
 
-        // if (Auth::attempt(['email' => $request->username, 'password' => $request->password])) {
-        //     if (auth()->user()->is_admin == 1) {
-        //         return redirect()->intended('/musik');
-        //     } else {
-        //         return redirect()->intended('/home');
-        //     }
-        // }
-
-        // return back()->withErrors('Invalid username or password.');
-
+    // return back()->withErrors('Invalid username or password.');
 
 }
