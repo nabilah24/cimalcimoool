@@ -12,7 +12,7 @@
    <body>
     <div class="bg-img ">
         <div class="content">
-            <header>RESET PASSWORD</header>
+            <header>Masukkan Password Baru Kamu</header>
             <div class="card-body">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -27,15 +27,13 @@
                 @endif --}}
             </div>
             <div class="container">
-                <form method="POST" action="{{ route ('forgotpassword-act') }}">
+                <form method="POST" action="{{ route('validasi-forgot-password-act') }}">
                     @csrf
+                    <input type="hidden" name="token" value="{{ $token }}">
                     <div class="field col-md-4">
                         <span class="fa fa-user"></span>
-                        <input type="email" required placeholder="Email Terdaftar" name="email" class="form-control @error('email') is-invalid @enderror" autofocus>
+                        <input type="password" required placeholder="Masukkan Password Baru" name="password" autofocus>
                     </div>
-                    @error('email')
-                        <small> {{ $message }}</small>
-                    @enderror
                     <br>
                     <div class="field">
                         <input type="submit" class="submit" value="Send link">

@@ -42,7 +42,7 @@
                   <span class="show">SHOW</span>
                </div>
                <div class="pass">
-                  <a href="{{ url('forgot-password') }}">Forgot Password?</a>
+                  <a href="{{ url('forgot-password') }}">Reset Password?</a>
                </div>
                <div class="field">
                   <input type="submit" value="LOGIN">

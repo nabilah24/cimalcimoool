@@ -9,6 +9,7 @@ use App\Models\Login;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
 // web utama
 Route::get('/', [AllController::class, 'index']);
 
@@ -46,6 +47,9 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 //forgotpassword
 Route::get('/forgot-password', [UserController::class, 'showLinkRequestForm'])->name('forgot-password');
 Route::post('/forgotpassword-act', [UserController::class, 'sendResetLinkEmail'])->name('forgotpassword-act');
+
+Route::get('/validasi-forgot-password/{token}', [UserController::class, 'validasi_forgot_password'])->name('validasi-forgot-password');
+Route::post('/validasi-forgot-password-act', [UserController::class, 'validasi_forgot_password_act'])->name('validasi-forgot-password-act');
 
 Route::get('/profile', function () {
     $user = Auth::user();
