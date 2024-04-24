@@ -9,6 +9,8 @@
     {{-- title --}}
     <title>CimalCimol</title>
 
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/nav-brand.png') }}">
+
     {{-- bootstrap css --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -89,8 +91,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6 text-decoration-none">
                     <h1 class="text-footer fw-bold mb-4">CimalCimol</h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
-                        stet lorem sit clita</p>
+                    <p>Temukan berbagai makanan ringan khas Indonesia yang lezat di Cimalcimol! Dari cimol hingga makaroni, kami hadirkan produk berkualitas tinggi dengan proses produksi yang terjaga. Bergabunglah dan nikmati pengalaman berbelanja tak terlupakan bersama kami!</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>

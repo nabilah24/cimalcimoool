@@ -82,8 +82,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6 text-decoration-none">
                     <h1 class="text-footer fw-bold mb-4">CimalCimol</h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
-                        stet lorem sit clita</p>
+                    <p>Temukan berbagai makanan ringan khas Indonesia yang lezat di Cimalcimol! Dari cimol hingga makaroni, kami hadirkan produk berkualitas tinggi dengan proses produksi yang terjaga. Bergabunglah dan nikmati pengalaman berbelanja tak terlupakan bersama kami!</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start fw-normal mb-4">Contact</h4>
@@ -91,8 +90,8 @@
                     <p class="mb-2"><i class="bi bi-telephone-fill me-3"></i>+62 898-3550-049</p>
                     <p class="mb-2"><i class="bi bi-envelope-fill me-3"></i>icimalcimoool@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="bi bi-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="bi bi-tiktok"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/cimalcimoool/"><i class="bi bi-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@cimalcimoool?_r=1&_d=e47chakdb9fi5h&sec_uid=MS4wLjABAAAA5wFixJX2fpu5_9VIfSKwUd9N43-C3h3-MCn8lRZVfx-wDanrVSA59KKwrhw5yvpw&share_author_id=7148075162696254491&sharer_language=en&source=h5_t&u_code=d0c1hj81h06mh0&timestamp=1713928053&user_id=6563979983780364289&sec_user_id=MS4wLjABAAAAjHYejMrVgyTtQwVju8eXMQ9wfjTW7RHzW6snGlY-rzOxvF49XaL7Zk8E6c2fNVP1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7361151385524635397&share_link_id=d419203d-97c5-42e3-a99b-8add7f6494ec&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b6880%2Cb2878&social_share_type=5&enable_checksum=1"><i class="bi bi-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">

@@ -54,7 +54,7 @@ Route::post('/validasi-forgot-password-act', [UserController::class, 'validasi_f
 Route::get('/profile', function () {
     $user = Auth::user();
 
-    return view('profile', ['user' => $user]);
+    return view('weUtama.profile', ['user' => $user]);
 })->middleware('auth')->name('profile');
 
 // Route::get('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile');
