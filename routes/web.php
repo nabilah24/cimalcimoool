@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Models\Login;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 
 // web utama
@@ -56,6 +57,11 @@ Route::get('/profile', function () {
 
     return view('weUtama.profile', ['user' => $user]);
 })->middleware('auth')->name('profile');
+
+// Route::post('/contact', [ContactController::class, 'store'])->name('weUtama.contact');
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
 
 // Route::get('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile');
 // Route::post('/updateprofile', 'ProfileController@updateProfileSubmit')->name('updateprofile.submit');
