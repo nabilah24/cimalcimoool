@@ -28,5 +28,13 @@ class ContactController extends Controller
             return redirect()->back()->with('error', 'Failed to save data. Please try again.');
         }
     }
+
+    public function viewContact()
+{
+    $contacts = Contact::all(); // Ambil semua data dari tabel contacts
+
+    return view('admin.menu.viewcontact', compact('contacts'));
+}
+
 }
 
