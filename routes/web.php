@@ -25,7 +25,9 @@ Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->na
 Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
 
 // crud webAdmin
-Route::get('/dashboard', [AllController::class, 'dashboard'])->name('admin.dashboard');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [AllController::class, 'dashboard'])->name('admin.dashboard');
+});
 Route::get('/user', [AllController::class, 'user'])->name('admin.user');
 Route::get('/tables', [AllController::class, 'tables'])->name('admin.tables');
 Route::get('/maps', [AllController::class, 'maps'])->name('admin.maps');

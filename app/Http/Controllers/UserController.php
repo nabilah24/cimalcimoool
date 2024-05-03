@@ -120,7 +120,8 @@ class UserController extends Controller
 
         Mail::to($request->email)->send(new ResetPasswordMail($token));
 
-        return redirect()->route('forgotpassword-act')->with('success', 'Kami telah mengirimkan link reset password ke email anda');
+        return redirect()->route('forgot-password')
+            ->with('success', 'Kami telah mengirimkan link reset password ke email anda');
 
 
         // $user = User::where('email', $request->email)->first();
