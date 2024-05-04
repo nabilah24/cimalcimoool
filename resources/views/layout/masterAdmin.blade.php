@@ -55,7 +55,7 @@
                     <i class='bx bx-list-ul'></i>
                     <span class="text">Tables</span>
                 </a>
-            </li>
+            </li> 
             <li class="{{ request()->routeIs('admin.user') ? 'active' : '' }}">
                 <a href="/user ">
                     <i class='bx bxs-user-account'></i>
@@ -68,6 +68,12 @@
                     <span class="text">Menu List</span>
                 </a>
             </li>
+            <li class="{{ request()->routeIs('viewcontact') ? 'active' : '' }}">
+                <a href="/viewcontact">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="text">Contact</span>
+                </a>
+            </li> 
         </ul>
         <ul class="side-menu">
             <li>

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
 
-// web utama
+// web utama 
 Route::get('/', [AllController::class, 'index']);
 
 
