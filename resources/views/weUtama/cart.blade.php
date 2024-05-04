@@ -54,10 +54,9 @@
                                         </td>
                                         <td data-th="Price">Rp {{ $details['harga'] }}</td>
 
-                                        <td data-th="Subtotal" class="text-center"></td>
+                                        <td data-th="Subtotal" class="text-center">Rp <span class="subtotal">{{ $details['harga'] }}</span></td>
                                         <td class="actions">
-                                            <a class="btn btn-outline-danger btn-sm delete-product"><i
-                                                    class="fa fa-trash-o"></i></a>
+                                            <button class="btn btn-outline-danger btn-sm delete-product"><i class="fa fa-trash-o"></i> Hapus</button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -69,7 +68,7 @@
                                     <a href="{{ url('/menu') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>
                                         Continue
                                         Shopping</a>
-                                    <button class="btn btn-danger">Checkout</button>
+                                    <button class="btn btn-danger" type="submit">Checkout</button>
                                 </td>
                             </tr>
                         </tfoot>
@@ -82,40 +81,55 @@
 
 @section('scripts')
     <script type="text/javascript">
-        $(".edit-cart-info").change(function(e) {
-            e.preventDefault();
-            var ele = $(this);
-            $.ajax({
-                url: '{{ route('update.shopping.cart') }}',
-                method: "patch",
-                data: {
-                    _token: '{{ csrf_token() }}',
-                    id: ele.parents("tr").attr("rowId"),
-                },
-                success: function(response) {
-                    window.location.reload();
-                }
+        // Menghitung total harga belanjaan dan menampilkannya
+        function calculateTotal() {
+            var total = 0;
+            $('.subtotal').each(function() {
+                total += parseInt($(this).text().replace('Rp ', '').replace(',', ''));
             });
-        });
+            $('.total-price').text('Rp ' + total.toLocaleString());
+        }
 
-        $(".delete-product").click(function(e) {
-            e.preventDefault();
+        $(document).ready(function() {
+            // Memperbarui total saat dokumen siap
+            calculateTotal();
 
-            var ele = $(this);
-
-            if (confirm("Do you really want to delete?")) {
+            // Memperbarui total saat ada perubahan pada keranjang belanja
+            $(".edit-cart-info").change(function(e) {
+                e.preventDefault();
+                var ele = $(this);
                 $.ajax({
-                    url: '{{ route('delete.cart.item') }}',
-                    method: "DELETE",
+                    url: '{{ route('update.shopping.cart') }}',
+                    method: "patch",
                     data: {
                         _token: '{{ csrf_token() }}',
-                        id: ele.parents("tr").attr("rowId")
+                        id: ele.parents("tr").attr("rowId"),
                     },
                     success: function(response) {
                         window.location.reload();
                     }
                 });
-            }
+            });
+
+            // Menghapus produk dari keranjang belanja
+            $(".delete-product").click(function(e) {
+                e.preventDefault();
+                var ele = $(this);
+                if (confirm("Do you really want to delete?")) {
+                    $.ajax({
+                        url: '{{ route('delete.cart.item') }}',
+                        method: "DELETE",
+                        data: {
+                            _token: '{{ csrf_token() }}',
+                            id: ele.parents("tr").attr("rowId")
+                        },
+                        success: function(response) {
+                            window.location.reload();
+                        }
+                    });
+                }
+            });
         });
     </script>
+
 @endsection

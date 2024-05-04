@@ -38,7 +38,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/about', [AllController::class, 'about']);
     Route::get('/menu', [AllController::class, 'menu']);
     Route::get('/contact', [AllController::class, 'contact']);
-
 });
 
 // login
