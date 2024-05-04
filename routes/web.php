@@ -72,7 +72,7 @@ Route::get('/profile', function () {
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-Route::get('/viewcontact', [ContactController::class, 'viewContact'])->name('admin.menu.viewcontact');
+Route::get('/viewcontact', [ContactController::class, 'viewContact'])->name('admin.viewcontact');
 
 // Route::get('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile');
 // Route::post('/updateprofile', 'ProfileController@updateProfileSubmit')->name('updateprofile.submit');

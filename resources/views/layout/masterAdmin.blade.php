@@ -53,22 +53,22 @@
             <li class="{{ request()->routeIs('admin.tables') ? 'active' : '' }}">
                 <a href="/tables">
                     <i class='bx bx-list-ul'></i>
-                    <span class="text">Tables</span>
+                    <span class="text">User List</span>
                 </a>
             </li> 
-            <li class="{{ request()->routeIs('admin.user') ? 'active' : '' }}">
+            <!-- <li class="{{ request()->routeIs('admin.user') ? 'active' : '' }}">
                 <a href="/user ">
                     <i class='bx bxs-user-account'></i>
                     <span class="text">User Data</span>
                 </a>
-            </li>
+            </li> -->
             <li class="{{ request()->routeIs('adminMenu.index') || request()->routeIs('adminMenu.edit') || request()->routeIs('adminMenu.show') || request()->routeIs('adminMenu.create') ? 'active' : '' }}">
                 <a href="/adminMenu">
                     <i class='bx bxs-food-menu' ></i>
                     <span class="text">Menu List</span>
                 </a>
             </li>
-            <li class="{{ request()->routeIs('viewcontact') ? 'active' : '' }}">
+            <li class="{{ request()->routeIs('admin.viewcontact') ? 'active' : '' }}">
                 <a href="/viewcontact">
                     <i class='bx bx-list-ul'></i>
                     <span class="text">Contact</span>
@@ -76,14 +76,14 @@
             </li> 
         </ul>
         <ul class="side-menu">
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class='bx bxs-cog'></i>
                     <span class="text">Settings</span>
                 </a>
-            </li>
+            </li> -->
             <li>
-                <a href="#" class="logout">
+                <a href="./login" class="logout">
                     <i class='bx bx-run'></i>
                     <span class="text">Logout</span>
                 </a>
