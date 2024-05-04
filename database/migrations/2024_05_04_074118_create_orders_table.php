@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->nama_product();
+            $table->nama_item();
             $table->harga();
             $table->total();
             $table->timestamps();

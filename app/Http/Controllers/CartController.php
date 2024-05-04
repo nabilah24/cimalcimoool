@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Menu;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Redirect,Response;
 
 class CartController extends Controller
 {
@@ -49,15 +51,28 @@ class CartController extends Controller
         }
     }
 
+    // public function billShow()
+    // {
+    //     // Di sini Anda dapat menambahkan logika untuk mengambil data pemesanan dari database
+    //    $orders = Order::all();
+
+    //     // Kemudian, Anda dapat mengirimkan data tersebut ke halaman bill
+    //     return view('weUtama.bill-show', [
+    //         'orders' => $orders,
+    //     ]);
+    // }
+
     public function billShow()
     {
-        // Di sini Anda dapat menambahkan logika untuk mengambil data pemesanan dari database
-       $orders = Order::all();
+      $data['orders'] = DB::table('orders')->get();
+       return view("Bill",$data);
+    }
 
-        // Kemudian, Anda dapat mengirimkan data tersebut ke halaman bill
-        return view('weUtama.bill-show', [
-            'orders' => $orders,
-        ]);
+    public function getPrice()
+    {
+        $getPrice = $_GET['id'];
+        $price  = DB::table('orders')->where('id', $getPrice)->get();
+        return Response::json($price);
     }
 
     public function deleteProduct(Request $request)

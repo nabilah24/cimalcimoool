@@ -21,6 +21,7 @@ Route::get('/menu/{id}', [CartController::class, 'addMenutoCart'])->name('addmen
 Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.shopping.cart');
 Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
 Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
+Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
 // routes/web.php
 Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
