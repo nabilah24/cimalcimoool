@@ -13,6 +13,7 @@ use App\Models\PasswordResetToken;
 use App\Mail\ResetPasswordMail;
 use Illuminate\Support\Facades\Mail;
 
+
 class UserController extends Controller
 {
     public function register()

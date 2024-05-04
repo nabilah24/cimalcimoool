@@ -14,10 +14,6 @@ use App\Http\Controllers\ContactController;
 // web utama
 Route::get('/', [AllController::class, 'index']);
 
-Route::get('/home', [AllController::class, 'home']);
-Route::get('/about', [AllController::class, 'about']);
-Route::get('/menu', [AllController::class, 'menu']);
-Route::get('/contact', [AllController::class, 'contact']);
 
 Route::get('/shopping', [CartController::class, 'index']);
 Route::get('/shopping-cart', [CartController::class, 'menuCart'])->name('shopping.cart');
@@ -35,6 +31,15 @@ Route::get('/maps', [AllController::class, 'maps'])->name('admin.maps');
 Route::get('/userProfile', [AllController::class, 'userProfile'])->name('admin.userProfile');
 
 Route::resource('/adminMenu', MenuController::class);
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [AllController::class, 'home'])->name('weUtama.home');
+    Route::get('/about', [AllController::class, 'about']);
+    Route::get('/menu', [AllController::class, 'menu']);
+    Route::get('/contact', [AllController::class, 'contact']);
+
+});
 
 // login
 Route::get('/login', [UserController::class, 'login'])->name('login');
