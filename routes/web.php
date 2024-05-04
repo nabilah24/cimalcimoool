@@ -20,6 +20,10 @@ Route::get('/shopping-cart', [CartController::class, 'menuCart'])->name('shoppin
 Route::get('/menu/{id}', [CartController::class, 'addMenutoCart'])->name('addmenu.to.cart');
 Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.shopping.cart');
 Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
+Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
+// routes/web.php
+Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
 
 // crud webAdmin
 Route::middleware('auth')->group(function () {

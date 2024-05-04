@@ -32,7 +32,7 @@
                             <tr>
                                 <th>Product</th>
                                 <th>Price</th>
-                                <th>Total</th>
+                                {{-- <th>Total</th> --}}
                                 <th></th>
                             </tr>
                         </thead>
@@ -54,9 +54,10 @@
                                         </td>
                                         <td data-th="Price">Rp {{ $details['harga'] }}</td>
 
-                                        <td data-th="Subtotal" class="text-center">Rp <span class="subtotal">{{ $details['harga'] }}</span></td>
+                                        {{-- <td data-th="Subtotal" class="text-center"></td> --}}
                                         <td class="actions">
-                                            <button class="btn btn-outline-danger btn-sm delete-product"><i class="fa fa-trash-o"></i> Hapus</button>
+                                            <a class="btn btn-outline-danger btn-sm delete-product"><i
+                                                    class="fa fa-trash-o">Hapus</i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -81,55 +82,40 @@
 
 @section('scripts')
     <script type="text/javascript">
-        // Menghitung total harga belanjaan dan menampilkannya
-        function calculateTotal() {
-            var total = 0;
-            $('.subtotal').each(function() {
-                total += parseInt($(this).text().replace('Rp ', '').replace(',', ''));
+        $(".edit-cart-info").change(function(e) {
+            e.preventDefault();
+            var ele = $(this);
+            $.ajax({
+                url: '{{ route('update.shopping.cart') }}',
+                method: "patch",
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    id: ele.parents("tr").attr("rowId"),
+                },
+                success: function(response) {
+                    window.location.reload();
+                }
             });
-            $('.total-price').text('Rp ' + total.toLocaleString());
-        }
+        });
 
-        $(document).ready(function() {
-            // Memperbarui total saat dokumen siap
-            calculateTotal();
+        $(".delete-product").click(function(e) {
+            e.preventDefault();
 
-            // Memperbarui total saat ada perubahan pada keranjang belanja
-            $(".edit-cart-info").change(function(e) {
-                e.preventDefault();
-                var ele = $(this);
+            var ele = $(this);
+
+            if (confirm("Do you really want to delete?")) {
                 $.ajax({
-                    url: '{{ route('update.shopping.cart') }}',
-                    method: "patch",
+                    url: '{{ route('delete.cart.item') }}',
+                    method: "DELETE",
                     data: {
                         _token: '{{ csrf_token() }}',
-                        id: ele.parents("tr").attr("rowId"),
+                        id: ele.parents("tr").attr("rowId")
                     },
                     success: function(response) {
                         window.location.reload();
                     }
                 });
-            });
-
-            // Menghapus produk dari keranjang belanja
-            $(".delete-product").click(function(e) {
-                e.preventDefault();
-                var ele = $(this);
-                if (confirm("Do you really want to delete?")) {
-                    $.ajax({
-                        url: '{{ route('delete.cart.item') }}',
-                        method: "DELETE",
-                        data: {
-                            _token: '{{ csrf_token() }}',
-                            id: ele.parents("tr").attr("rowId")
-                        },
-                        success: function(response) {
-                            window.location.reload();
-                        }
-                    });
-                }
-            });
+            }
         });
     </script>
-
 @endsection

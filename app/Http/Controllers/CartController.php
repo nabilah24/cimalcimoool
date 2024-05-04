@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -46,6 +47,17 @@ class CartController extends Controller
             session()->put('cart', $cart);
             session()->flash('success', 'Item added to cart.');
         }
+    }
+
+    public function billShow()
+    {
+        // Di sini Anda dapat menambahkan logika untuk mengambil data pemesanan dari database
+       $orders = Order::all();
+
+        // Kemudian, Anda dapat mengirimkan data tersebut ke halaman bill
+        return view('weUtama.bill-show', [
+            'orders' => $orders,
+        ]);
     }
 
     public function deleteProduct(Request $request)

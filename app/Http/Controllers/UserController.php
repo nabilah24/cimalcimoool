@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\PasswordResetToken;
 use App\Mail\ResetPasswordMail;
 use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -105,7 +105,7 @@ class UserController extends Controller
         //     'email' => $request->email,
         // ];
 
-        $token = \Str::random(60);
+        $token = Str::random(60);
 
         PasswordResetToken::updateOrCreate(
             [
