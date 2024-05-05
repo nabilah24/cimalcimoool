@@ -72,11 +72,11 @@
                     @endif
                 </tbody>
                 <tfoot>
-                    <tr class="visible-xs">
+                    <!-- <tr class="visible-xs">
                         <td class="text-center">
-                            <strong>Total: {{ $total }}</strong>
+                            <strong>Sub Total: {{ $total }}</strong>
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>
                             <a href="{{ url('/menu') }}" class="btn btn-warning">
