@@ -66,11 +66,8 @@
                         <tfoot>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{{ url('/menu') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>
-                                        Continue
-                                        Shopping</a>
-                                    <button class="btn btn-danger checkout-btn" id="checkout-btn" type="submit">Checkout</button>
-
+                                    <a href="{{ url('/menu') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>Continue Shopping</a>
+                                    <a href="{{ url('/bill') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>Checkout</a>
                                 </td>
                             </tr>
                         </tfoot>
