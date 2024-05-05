@@ -59,20 +59,20 @@ class CartController extends Controller
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
 
-        // $cart = session()->get('cart', []);
-        // if (isset($cart[$id])) {
-        //     $cart[$id]['quantity']++;
-        // } else {
-        //     $cart[$id] = [
-        //         'nama_item' => $menu->nama_item,
-        //         'quantity' => 1,
-        //         'harga' => $menu->harga,
-        //         'gambar' => $menu->gambar,
-        //     ];
-        // }
-        // session()->put('cart', $cart);
+    // $cart = session()->get('cart', []);
+    // if (isset($cart[$id])) {
+    //     $cart[$id]['quantity']++;
+    // } else {
+    //     $cart[$id] = [
+    //         'nama_item' => $menu->nama_item,
+    //         'quantity' => 1,
+    //         'harga' => $menu->harga,
+    //         'gambar' => $menu->gambar,
+    //     ];
+    // }
+    // session()->put('cart', $cart);
 
-        // return redirect()->back()->with('success', 'Item has been added to cart!');
+    // return redirect()->back()->with('success', 'Item has been added to cart!');
 
     public function updateCart(Request $request)
     {
@@ -112,14 +112,13 @@ class CartController extends Controller
 
     public function billshow()
     {
-        // Ambil data pesanan dari database untuk ditampilkan pada halaman billshow
-        // Misalnya:
-        $orders = Order::where('user_id', auth()->user()->id)->get(); // Sesuaikan dengan user yang login
+        // Ambil semua data pesanan dari database untuk ditampilkan pada halaman billshow
+        $orders = Order::all();
 
         // Kemudian kembalikan data pesanan ke halaman billshow
         return view('weUtama.bill-show', compact('orders'));
-        // Anda dapat mengirim data pesanan ke halaman billshow sesuai kebutuhan
     }
+
     // public function billShow()
     // {
     //   $data['orders'] = DB::table('orders')->get();

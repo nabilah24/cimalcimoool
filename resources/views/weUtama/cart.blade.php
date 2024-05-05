@@ -72,11 +72,6 @@
                     @endif
                 </tbody>
                 <tfoot>
-                    <tr class="visible-xs">
-                        <td class="text-center">
-                            <strong>Total: {{ $total }}</strong>
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             <a href="{{ url('/menu') }}" class="btn btn-warning">

@@ -53,7 +53,7 @@
                </div>
                <div class="field space">
                   <span class="fa fa-lock"></span>
-                  <input type="password" class="pass-key" required placeholder="Password" name="password" id="password">
+                  <input type="password" class="pass-key" required placeholder="Password-max 8 char" name="password" id="password">
                   <span class="show">SHOW</span>
                </div>
                <div class="field">

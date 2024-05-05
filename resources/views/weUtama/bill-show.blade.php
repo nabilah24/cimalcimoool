@@ -1,14 +1,15 @@
 @extends('layout.masterbill')
 
 @section('content')
+    {{-- hero --}}
     <div class="hero">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-5">
                     <div class="intro-excerpt">
-                        <h1>Receipt</h1>
+                        <h1>RECEIPT</h1>
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item text-decoration-none"><a href="/home">Home</a></li>
+                            <li class="breadcrumb-item text-decoration-none"><a href="/">Home</a></li>
                             <li class="breadcrumb-item"><a href="/menu">Menu</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Receipt</li>
                         </ol>
@@ -23,167 +24,84 @@
         </div>
     </div>
     {{-- hero end --}}
+
     <div class="container-xxl py-5">
-        <div class="text-center" style="color: #000000">
-            <h1>Receipt</h1>
-        </div>
-        <br>
-        <div class="row">
-            <table id="receipt_bill" class="table">
-                <thead>
-                    <tr>
-                        <th> No.</th>
-                        <th>Product Name</th>
-                        <th class="text-center">Price</th>
-                        <th class="text-center">Quantity</th>
-                        <th class="text-center">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @php $count = 1; $subTotal = 0; @endphp
-                    @foreach(session('cart') as $cart)
-                        <tr>
-                            <td>{{ $count }}</td>
-                            <td>{{ $cart['nama_item'] }}</td>
-                            <td>Rp {{ $cart['harga'] }}</td>
-                            <td>{{ $cart['quantity'] }}</td>
-                            <td>Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
+        <div class="container">
+            <div class="row">
+                <table id="receipt_bill" class="table table-hover table-conseded">
+                    <thead>
+                        <tr class="text-center">
+                            <th colspan="5" style="font-size: 40px; font-weight:bold">E-RECEIPT</th>
                         </tr>
+                        <tr>
+                            <th style="width: 10%" class="text-center">No</th>
+                            <th style="width: 30%" class="text-center">Nama Produk</th>
+                            <th style="width: 25%" class="text-center">Harga</th>
+                            <th style="width: 10%" class="text-center">Quantity</th>
+                            <th style="width: 10%" class="text-center">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through cart items -->
                         @php
-                            $subTotal += $cart['harga'] * $cart['quantity'];
-                            $count++;
+                            $count = 1;
+                            $subTotal = 0;
+                            $whatsappMessage = 'Halo kak, Saya mau order:';
                         @endphp
-                    @endforeach
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4" class="text-right">
-                            <h5><strong>Sub Total:  ₹ {{ $subTotal }}</strong></h5>
-                            <h5><strong>Tax (5%) : ₹ {{ $subTotal * 0.05 }}</strong></h5>
-                        </td>
-                        <td class="text-center text-dark">
-                            <h5><strong>Gross Total: ₹ {{ $subTotal + ($subTotal * 0.05) }}</strong></h5>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+                        @if (session()->has('cart') && !empty(session('cart')))
+                            @foreach (session('cart') as $cart)
+                                <!-- Add item to table -->
+                                <tr>
+                                    <td style="width: 10%" class="text-center">{{ $count }}</td>
+                                    <td style="width: 30%" >{{ $cart['nama_item'] }}</td>
+                                    <td style="width: 25%" class="text-center">Rp {{ $cart['harga'] }}</td>
+                                    <td style="width: 10%" class="text-center">{{ $cart['quantity'] }}</td>
+                                    <td style="width: 25%" class="text-center">Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
+                                </tr>
+                                <!-- Update subtotal and WhatsApp message -->
+                                @php
+                                    $subTotal += $cart['harga'] * $cart['quantity'];
+                                    $count++;
+                                    // Append item details to WhatsApp message
+                                    $whatsappMessage .=
+                                        "%0A{$cart['nama_item']} - Rp {$cart['harga']} x {$cart['quantity']}" .
+                                        '%0ANama:' .
+                                        '%0AAlamat:' .
+                                        '%0ANo.HP:' .
+                                        '%0A %0A *ᴴᵃʳᵍᵃ ᵇᵉˡᵘᵐ ᵗᵉʳᵐᵃˢᵘᵏ ᵖᵃʲᵃᵏ ᵈᵃⁿ ᵒⁿᵍᵏᶦʳ';
+                                @endphp
+                            @endforeach
+                        @endif
+                    </tbody>
+
+                    <tfoot>
+                        <!-- Footer content -->
+                        <tr>
+                            <td colspan="4" class="text-right">
+                                <h5><strong>Sub Total: Rp {{ $subTotal }}</strong></h5>
+                                <h5><strong>Tax (5%) : Rp {{ $subTotal * 0.05 }}</strong></h5>
+                            </td>
+                            <td class="text-center text-dark">
+                                <h5><strong>Gross Total: Rp {{ $subTotal + $subTotal * 0.05 }}</strong></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <a href="{{ url('/menu') }}" class="btn btn-warning">
+                                    <i class="bi bi-chevron-double-left" style="font-size: 12px; font-weight:bold;">Continue
+                                        Shopping</i>
+                                </a>
+                            </td>
+                            <td class="text-end">
+                                <a href="https://api.whatsapp.com/send?phone=628983550049&text={{ $whatsappMessage }}"
+                                    class="btn btn-info">
+                                    <i class="bi bi-cart-check"
+                                        style="font-size: 12px; font-weight:bold;">&nbsp;Checkout</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
-    </div>
-@endsection
-
-
-<script>
-    $(document).ready(function(){
-    //   $('#vegitable').change(function() {
-    //    var ids =   $(this).find(':selected')[0].id;
-    //     $.ajax({
-    //        type:'GET',
-    //        url:'getPrice/{id}',
-    //        data:{id:ids},
-    //        dataType:'json',
-    //        success:function(data)
-    //          {
-
-    //              $.each(data, function(key, resp)
-    //              {
-    //               $('#price').text(resp.product_price);
-    //             });
-    //          }
-    //     });
-    //   });
-
-    //   //add to cart
-    //   var count = 1;
-    //   $('#add').on('click',function(){
-
-    //      var name = $('#vegitable').val();
-    //      var qty = $('#qty').val();
-    //      var price = $('#price').text();
-
-    //      if(qty == 0)
-    //      {
-    //         var erroMsg =  '<span class="alert alert-danger ml-5">Minimum Qty should be 1 or More than 1</span>';
-    //         $('#errorMsg').html(erroMsg).fadeOut(9000);
-    //      }
-    //      else
-    //      {
-    //         billFunction(); // Below Function passing here
-    //      }
-
-         function billFunction()
-           {
-           var total = 0;
-
-           $("#receipt_bill").each(function () {
-           var total =  price*qty;
-           var subTotal = 0;
-           subTotal += parseInt(total);
-
-           var table =   '<tr><td>'+ count +'</td><td>'+ name + '</td><td>' + qty + '</td><td>' + price + '</td><td><strong><input type="hidden" id="total" value="'+total+'">' +total+ '</strong></td></tr>';
-           $('#new').append(table)
-
-            // Code for Sub Total of Vegitables
-             var total = 0;
-             $('tbody tr td:last-child').each(function() {
-                 var value = parseInt($('#total', this).val());
-                 if (!isNaN(value)) {
-                     total += value;
-                 }
-             });
-              $('#subTotal').text(total);
-
-             // Code for calculate tax of Subtoal 5% Tax Applied
-               var Tax = (total * 5) / 100;
-               $('#taxAmount').text(Tax.toFixed(2));
-
-              // Code for Total Payment Amount
-
-              var Subtotal = $('#subTotal').text();
-              var taxAmount = $('#taxAmount').text();
-
-              var totalPayment = parseFloat(Subtotal) + parseFloat(taxAmount);
-              $('#totalPayment').text(totalPayment.toFixed(2)); // Showing using ID
-
-          });
-          count++;
-         }
-        });
-            // Code for year
-
-            var currentdate = new Date();
-              var datetime = currentdate.getDate() + "/"
-                 + (currentdate.getMonth()+1)  + "/"
-                 + currentdate.getFullYear();
-                 $('#year').text(datetime);
-
-
-
-            // Code for extract Weekday
-                 function myFunction()
-                  {
-                     var d = new Date();
-                     var weekday = new Array(7);
-                     weekday[0] = "Sunday";
-                     weekday[1] = "Monday";
-                     weekday[2] = "Tuesday";
-                     weekday[3] = "Wednesday";
-                     weekday[4] = "Thursday";
-                     weekday[5] = "Friday";
-                     weekday[6] = "Saturday";
-
-                     var day = weekday[d.getDay()];
-                     return day;
-                     }
-                 var day = myFunction();
-                 $('#day').text(day);
-      });
- </script>
- <script>
-    window.onload = displayClock();
-
-     function displayClock(){
-       var time = new Date().toLocaleTimeString();
-       document.getElementById("time").innerHTML = time;
-        setTimeout(displayClock, 1000);
-     }
-</script>
+    @endsection
