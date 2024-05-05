@@ -82,7 +82,7 @@ class CartController extends Controller
         $orders = Order::where('user_id', auth()->user()->id)->get(); // Sesuaikan dengan user yang login
 
         // Kemudian kembalikan data pesanan ke halaman billshow
-        return view('billshow', compact('orders'));
+        return view('weUtama.bill-show', compact('orders'));
         // Anda dapat mengirim data pesanan ke halaman billshow sesuai kebutuhan
     }
     // public function billShow()
