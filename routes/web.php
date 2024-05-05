@@ -15,32 +15,48 @@ use App\Models\ShoppingCart;
 // web utama
 Route::get('/', [AllController::class, 'index']);
 
-Route::get('/shopping-cart', [CartController::class, 'menuCart'])->name('shopping.cart');
-Route::get('/menu/{id}', [CartController::class, 'addMenutoCart'])->name('addmenu.to.cart');
-Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.shopping.cart');
-Route::delete('/shopping-cart/{id}', [CartController::class, 'destroy'])->name('delete.cart.item');
-Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
-Route::get('/bill-show', [CartController::class, 'billShow'])->name('bill.show');
-Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
-Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
-
 // crud webAdmin
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [AllController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/user', [AllController::class, 'user'])->name('admin.user');
+    Route::get('/tables', [AllController::class, 'tables'])->name('admin.tables');
+    Route::get('/maps', [AllController::class, 'maps'])->name('admin.maps');
+    Route::get('/userProfile', [AllController::class, 'userProfile'])->name('admin.userProfile');
 });
-Route::get('/user', [AllController::class, 'user'])->name('admin.user');
-Route::get('/tables', [AllController::class, 'tables'])->name('admin.tables');
-Route::get('/maps', [AllController::class, 'maps'])->name('admin.maps');
-Route::get('/userProfile', [AllController::class, 'userProfile'])->name('admin.userProfile');
 
 Route::resource('/adminMenu', MenuController::class);
 
-
+// user
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [AllController::class, 'home'])->name('weUtama.home');
     Route::get('/about', [AllController::class, 'about']);
     Route::get('/menu', [AllController::class, 'menu']);
     Route::get('/contact', [AllController::class, 'contact']);
+    Route::get('/shopping-cart', [CartController::class, 'menuCart'])->name('shopping.cart');
+    Route::get('/menu/{id}', [CartController::class, 'addMenutoCart'])->name('addmenu.to.cart');
+    Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.shopping.cart');
+    Route::delete('/shopping-cart/{id}', [CartController::class, 'destroy'])->name('delete.cart.item');
+    Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
+    Route::get('/bill-show', [CartController::class, 'billShow'])->name('bill.show');
+    Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
+    Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
+
+    //forgotpassword
+    Route::get('/forgot-password', [UserController::class, 'showLinkRequestForm'])->name('forgot-password');
+    Route::post('/forgotpassword-act', [UserController::class, 'sendResetLinkEmail'])->name('forgotpassword-act');
+
+    Route::get('/validasi-forgot-password/{token}', [UserController::class, 'validasi_forgot_password'])->name('validasi-forgot-password');
+    Route::post('/validasi-forgot-password-act', [UserController::class, 'validasi_forgot_password_act'])->name('validasi-forgot-password-act');
+
+    Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+    Route::get('/viewcontact', [ContactController::class, 'viewContact'])->name('admin.viewcontact');
+
+    Route::get('/dashboard', [AllController::class, 'getUsersCount'])->name('dashboard');
+    
+    // logout
+    Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+
 });
 
 // login
@@ -51,15 +67,7 @@ Route::post('/login', [UserController::class, 'login_action']);
 Route::get('/register', [UserController::class, 'register']);
 Route::post('/register', [UserController::class, 'register_action']);
 
-// logout
-Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
-//forgotpassword
-Route::get('/forgot-password', [UserController::class, 'showLinkRequestForm'])->name('forgot-password');
-Route::post('/forgotpassword-act', [UserController::class, 'sendResetLinkEmail'])->name('forgotpassword-act');
-
-Route::get('/validasi-forgot-password/{token}', [UserController::class, 'validasi_forgot_password'])->name('validasi-forgot-password');
-Route::post('/validasi-forgot-password-act', [UserController::class, 'validasi_forgot_password_act'])->name('validasi-forgot-password-act');
 
 Route::get('/profile', function () {
     $user = Auth::user();
@@ -67,13 +75,6 @@ Route::get('/profile', function () {
     return view('weUtama.profile', ['user' => $user]);
 })->middleware('auth')->name('profile');
 
-// Route::post('/contact', [ContactController::class, 'store'])->name('weUtama.contact');
-
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
-Route::get('/viewcontact', [ContactController::class, 'viewContact'])->name('admin.viewcontact');
-
-Route::get('/dashboard', [AllController::class, 'getUsersCount'])->name('dashboard');
 
 
 // Route::get('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile');
@@ -89,3 +90,4 @@ Route::get('/dashboard', [AllController::class, 'getUsersCount'])->name('dashboa
 // Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
 // routes/web.php
 // Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+// Route::post('/contact', [ContactController::class, 'store'])->name('weUtama.contact');
