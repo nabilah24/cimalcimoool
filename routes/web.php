@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Models\ShoppingCart;
 
+
 // web utama
 Route::get('/', [AllController::class, 'index']);
 
@@ -22,6 +23,12 @@ Route::delete('/shopping-cart/{id}', [CartController::class, 'destroy'])->name('
 // Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
 // Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
 // Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
+Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
+Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
+Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
+// routes/web.php
+// Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
 
 // crud webAdmin
 Route::middleware('auth')->group(function () {
@@ -71,6 +78,9 @@ Route::get('/profile', function () {
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/viewcontact', [ContactController::class, 'viewContact'])->name('admin.viewcontact');
+
+Route::get('/dashboard', [AllController::class, 'getUsersCount'])->name('dashboard');
+
 
 // Route::get('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile');
 // Route::post('/updateprofile', 'ProfileController@updateProfileSubmit')->name('updateprofile.submit');

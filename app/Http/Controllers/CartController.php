@@ -94,19 +94,44 @@ class CartController extends Controller
     //         'orders' => $orders,
     //     ]);
     // }
-
-    public function billShow()
+    public function checkout(Request $request)
     {
         $data['orders'] = DB::table('orders')->get();
         return view("Bill", $data);
+        // Proses penyimpanan data ke database
+        // Misalnya:
+        $order = new Order();
+        $order->user_id = auth()->user()->id; // Sesuaikan dengan user yang login
+        $order->save();
+
+        // Setelah menyimpan ke database, kosongkan session cart
+        session()->forget('cart');
+
+        return redirect()->route('billshow');
     }
 
-    public function getPrice()
+    public function billshow()
     {
-        $getPrice = $_GET['id'];
-        $price  = DB::table('orders')->where('id', $getPrice)->get();
-        return Response::json($price);
+        // Ambil data pesanan dari database untuk ditampilkan pada halaman billshow
+        // Misalnya:
+        $orders = Order::where('user_id', auth()->user()->id)->get(); // Sesuaikan dengan user yang login
+
+        // Kemudian kembalikan data pesanan ke halaman billshow
+        return view('weUtama.bill-show', compact('orders'));
+        // Anda dapat mengirim data pesanan ke halaman billshow sesuai kebutuhan
     }
+    // public function billShow()
+    // {
+    //   $data['orders'] = DB::table('orders')->get();
+    //    return view("Bill",$data);
+    // }
+
+    // public function getPrice()
+    // {
+    //     $getPrice = $_GET['id'];
+    //     $price  = DB::table('orders')->where('id', $getPrice)->get();
+    //     return Response::json($price);
+    // }
 
     public function destroy($id)
     {

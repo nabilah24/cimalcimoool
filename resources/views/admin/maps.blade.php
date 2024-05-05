@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <ul class="box-info">
+        <!-- <ul class="box-info">
             <li>
                 <i class='bx bxs-calendar-check'></i>
                 <span class="text">
@@ -39,7 +39,7 @@
                     <p>Total Sales</p>
                 </span>
             </li>
-        </ul>
+        </ul> -->
 
         <div class="maps">
             <iframe

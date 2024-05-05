@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AllController extends Controller
 {
@@ -83,4 +85,19 @@ class AllController extends Controller
         // Pass menus and users data to the view
         return view('admin.user.userProfile', compact('user'));
     }
+
+    public function getUsersCount()
+    {
+        try {
+            // Query untuk mengambil jumlah user dari tabel "users"
+            $userCount = DB::table('users')->count();
+
+            // Kemudian lewatkan $userCount ke view
+            return view('admin.dashboard', ['userCount' => $userCount]);
+        } catch (\Exception $e) {
+            // Tangani kesalahan jika terjadi
+            return back()->withError('Failed to fetch user count.')->withInput();
+        }
+    }
+
 }

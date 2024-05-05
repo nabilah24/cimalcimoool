@@ -80,7 +80,8 @@
                     <tr>
                         <td>
                             <a href="{{ url('/menu') }}" class="btn btn-warning">
-                                <i class="bi bi-chevron-double-left" style="font-size: 12px; font-weight:bold;">Continue Shopping</i>
+                                <i class="bi bi-chevron-double-left" style="font-size: 12px; font-weight:bold;">Continue
+                                    Shopping</i>
                             </a>
                             <a href="{{ url('') }}" class="btn btn-info">
                                 <i class="bi bi-cart-check" style="font-size: 12px; font-weight:bold;">&nbsp;Checkout</i>

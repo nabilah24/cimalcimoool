@@ -11,7 +11,7 @@
                         <th>Username</th>
                         <th>Email</th>
                         <th>No. Handphone</th>
-                        <th>Password</th>
+                        <!-- <th>Password</th> -->
                         <th>Created at</th>
                         <!-- <th>Updated at</th> -->
                     </tr>
@@ -23,7 +23,7 @@
                             <td>{{ $user->username }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->phone }}</td>
-                            <td>{{ $user->password}}</td>
+                            <!-- <td>{{ $user->password}}</td> -->
                             <td>{{ $user->created_at}}</td>
                             <!-- <td>{{ $user->updated_at}}</td> -->
                         </tr>

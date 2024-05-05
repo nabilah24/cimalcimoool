@@ -1,150 +1,77 @@
-<!-- resources/views/bill/show.blade.php -->
+@extends('layout.masterbill')
 
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill</title>
-</head>
-<body>
-    <h1>Bill</h1>
-    @foreach($orders as $order)
-        <div>
-            <p>Order ID: {{ $order->id }}</p>
-            <p>Total: {{ $order->total }}</p>
-
-        </div>
-    @endforeach
-</body>
-</html> --}}
-@extends('layout.master')
 @section('content')
-      {{-- <section class="mt-3"> --}}
-        <div class="hero">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-5">
-                        <div class="intro-excerpt">
-                            <h1>Receipt</h1>
-                            <ol class="breadcrumb justify-content-center text-uppercase">
-                                <li class="breadcrumb-item text-decoration-none"><a href="/home">Home</a></li>
-                                <li class="breadcrumb-item"><a href="/menu">Menu</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Receipt</li>
-                            </ol>
-                        </div>
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Receipt</h1>
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item text-decoration-none"><a href="/home">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/menu">Menu</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Receipt</li>
+                        </ol>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="hero-img-wrap">
-                            <img src="{{ asset('assets/images/logo/logo.png') }}" class="img-fluid">
-                        </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="hero-img-wrap">
+                        <img src="{{ asset('assets/images/logo/logo.png') }}" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
-        {{-- hero end --}}
-         {{-- <h6 class="text-center"> Shine Metro Mkadi Naka (New - Delhi)</h6> --}}
-         {{-- <div class="row">
-            <div class="col-md-5  mt-4 ">
-               <table class="table" style="background-color:#e0e0e0;" >
-
-                  <thead>
-                     <tr>
-                        <th>No.</th>
-                        <th>Meal Items</th>
-                        <th style="width: 31%">Qty</th>
-                        <th>Price</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td scope="row">1</td>
-                        <td style="width:60%">
-                           <select name="vegitable" id="vegitable"  class="form-control">
-                             @foreach($orders as $row )
-                              <option id={{$row->id}} value={{$row->product_name}} class="vegitable custom-select">
-                                {{$row->product_name}}
-                              </option>
-                             @endforeach
-                           </select>
-                        </td>
-                        <td style="width:1%">
-                          <input type="number" id="qty" min="0" value="0" class="form-control">
-                        </td>
-                        <td>
-                           <h5 class="mt-1" id="price" ></h5>
-                        </td>
-                        <td><button id="add" class="btn btn-success">Add</button></td>
-                     </tr>
-                     <tr>
-                     </tr>
-
-                  </tbody>
-               </table>
-               <div role="alert" id="errorMsg" class="mt-5" >
-                 <!-- Error msg  -->
-              </div>
-            </div> --}}
-
-               <div class="container-xxl py-5">
-                  <div class="text-center" style="color: #000000">
-                     <h1>Receipt</h1>
-                  </div>
-                  <br>
-                  {{-- <span class="mt-4"> Time : </span><span  class="mt-4" id="time"></span>
-                  <div class="row">
-                     <div class="col-xs-6 col-sm-6 col-md-6 ">
-                        <span id="day"></span> : <span id="year"></span>
-                     </div>
-                     <div class="col-xs-6 col-sm-6 col-md-6 text-right">
-                        <p>Order No:1234</p>
-                     </div>
-                  </div> --}}
-                  <div class="row">
-                     </span>
-                     <table id="receipt_bill" class="table">
-                        <thead>
-                           <tr>
-                              <th> No.</th>
-                              <th>Product Name</th>
-                              <th class="text-center">Price</th>
-                              <th class="text-center">Total</th>
-                           </tr>
-                        </thead>
-                        <tbody id="new" >
-
-                        </tbody>
+    </div>
+    {{-- hero end --}}
+    <div class="container-xxl py-5">
+        <div class="text-center" style="color: #000000">
+            <h1>Receipt</h1>
+        </div>
+        <br>
+        <div class="row">
+            <table id="receipt_bill" class="table">
+                <thead>
+                    <tr>
+                        <th> No.</th>
+                        <th>Product Name</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-center">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php $count = 1; $subTotal = 0; @endphp
+                    @foreach(session('cart') as $cart)
                         <tr>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td class="text-right text-dark" >
-                                <h5><strong>Sub Total:  ₹ </strong></h5>
-                                <p><strong>Tax (5%) : ₹ </strong></p>
-                           </td>
-                           <td class="text-center text-dark" >
-                              <h5> <strong><span id="subTotal"></strong></h5>
-                              <h5> <strong><span id="taxAmount"></strong></h5>
-                           </td>
+                            <td>{{ $count }}</td>
+                            <td>{{ $cart['nama_item'] }}</td>
+                            <td>Rp {{ $cart['harga'] }}</td>
+                            <td>{{ $cart['quantity'] }}</td>
+                            <td>Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
                         </tr>
-                        <tr>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td class="text-right text-dark">
-                              <h5><strong>Gross Total: ₹ </strong></h5>
-                           </td>
-                           <td class="text-center text-danger">
-                              <h5 id="totalPayment"><strong> </strong></h5>
-
-                           </td>
-                        </tr>
-                     </table>
-                  </div>
-               </div>
-
-         </div>
+                        @php
+                            $subTotal += $cart['harga'] * $cart['quantity'];
+                            $count++;
+                        @endphp
+                    @endforeach
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right">
+                            <h5><strong>Sub Total:  ₹ {{ $subTotal }}</strong></h5>
+                            <h5><strong>Tax (5%) : ₹ {{ $subTotal * 0.05 }}</strong></h5>
+                        </td>
+                        <td class="text-center text-dark">
+                            <h5><strong>Gross Total: ₹ {{ $subTotal + ($subTotal * 0.05) }}</strong></h5>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
 @endsection
+
+
 <script>
     $(document).ready(function(){
     //   $('#vegitable').change(function() {
