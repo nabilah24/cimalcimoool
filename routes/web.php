@@ -75,6 +75,9 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('/viewcontact', [ContactController::class, 'viewContact'])->name('admin.viewcontact');
 
+Route::get('/dashboard', [AllController::class, 'getUsersCount'])->name('dashboard');
+
+
 // Route::get('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile');
 // Route::post('/updateprofile', 'ProfileController@updateProfileSubmit')->name('updateprofile.submit');
 

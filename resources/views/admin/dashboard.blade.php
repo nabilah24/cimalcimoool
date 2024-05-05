@@ -16,10 +16,10 @@
                     </li>
                 </ul>
             </div>
-            <a href="#" class="btn-download">
+            <!-- <a href="#" class="btn-download">
                 <i class='bx bxs-cloud-download'></i>
                 <span class="text">Download PDF</span>
-            </a>
+            </a> -->
         </div>
 
         <ul class="box-info">
@@ -33,8 +33,8 @@
             <li>
                 <i class='bx bxs-group'></i>
                 <span class="text">
-                    <h3>2834</h3>
-                    <p>Visitors</p>
+                    <h3>{{ $userCount }}</h3>
+                    <p>User</p>
                 </span>
             </li>
             <li>
