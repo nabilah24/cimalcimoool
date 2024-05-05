@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.masterbill')
 
 @section('content')
     <div class="hero">
