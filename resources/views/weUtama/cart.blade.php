@@ -83,7 +83,7 @@
                                 <i class="bi bi-chevron-double-left" style="font-size: 12px; font-weight:bold;">Continue
                                     Shopping</i>
                             </a>
-                            <a href="{{ url('') }}" class="btn btn-info">
+                            <a href="{{ url('/bill-show') }}" class="btn btn-info">
                                 <i class="bi bi-cart-check" style="font-size: 12px; font-weight:bold;">&nbsp;Checkout</i>
                             </a>
                         </td>
