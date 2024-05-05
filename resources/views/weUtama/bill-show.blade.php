@@ -1,23 +1,3 @@
-<!-- resources/views/bill/show.blade.php -->
-
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill</title>
-</head>
-<body>
-    <h1>Bill</h1>
-    @foreach($orders as $order)
-        <div>
-            <p>Order ID: {{ $order->id }}</p>
-            <p>Total: {{ $order->total }}</p>
-
-        </div>
-    @endforeach
-</body>
-</html> --}}
 @extends('layout.master')
 @section('content')
       {{-- <section class="mt-3"> --}}

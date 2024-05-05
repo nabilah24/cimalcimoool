@@ -12,8 +12,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::latest()->paginate(5);
-
+        $menus = Menu::get();
         return view('admin.menu.adminMenu', compact('menus'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }

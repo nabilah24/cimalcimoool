@@ -33,7 +33,7 @@ class ContactController extends Controller
 {
     $contacts = Contact::all(); // Ambil semua data dari tabel contacts
 
-    return view('admin.menu.viewcontact', compact('contacts'));
+    return view('admin.viewcontact', compact('contacts'));
 }
 
 }

@@ -24,7 +24,7 @@
                     <i class='bx bx-filter'></i>
                 </div>
                 @if ($message = Session::get('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert"">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <p>{{ $message }}</p>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
@@ -67,7 +67,7 @@
                         @endempty
                     </tbody>
                 </table>
-                {{ $menus->links() }}
+
             </div>
         </div>
     </main>
