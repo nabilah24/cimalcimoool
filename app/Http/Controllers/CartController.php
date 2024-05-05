@@ -142,6 +142,6 @@ class CartController extends Controller
             session()->flash('success', 'Product removed successfully');
         }
 
-        return redirect()->back();
+        return redirect()->route('shopping.cart');
     }
 }

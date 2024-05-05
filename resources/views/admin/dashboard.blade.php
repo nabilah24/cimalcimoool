@@ -71,21 +71,23 @@
                             $count = 1;
                             $subTotal = 0;
                         @endphp
-                        @foreach (session('cart') as $cart)
-                            <tr>
-                                <td>
-                            <tr>
-                                <td>{{ $count }}</td>
-                                <td>{{ $cart['nama_item'] }}</td>
-                                <td>Rp {{ $cart['harga'] }}</td>
-                                <td>{{ $cart['quantity'] }}</td>
-                                <td>Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
-                            </tr>
-                            @php
-                                $subTotal += $cart['harga'] * $cart['quantity'];
-                                $count++;
-                            @endphp
-                        @endforeach
+                        @if (session()->has('cart') && !is_null(session('cart')))
+                            @foreach (session('cart') as $cart)
+                                <tr>
+                                    <td>
+                                <tr>
+                                    <td>{{ $count }}</td>
+                                    <td>{{ $cart['nama_item'] }}</td>
+                                    <td>Rp {{ $cart['harga'] }}</td>
+                                    <td>{{ $cart['quantity'] }}</td>
+                                    <td>Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
+                                </tr>
+                                @php
+                                    $subTotal += $cart['harga'] * $cart['quantity'];
+                                    $count++;
+                                @endphp
+                            @endforeach
+                        @endif
                     <tfoot>
                         <tr>
                             <td colspan="4" class="text-right">
