@@ -19,15 +19,9 @@ Route::get('/shopping-cart', [CartController::class, 'menuCart'])->name('shoppin
 Route::get('/menu/{id}', [CartController::class, 'addMenutoCart'])->name('addmenu.to.cart');
 Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.shopping.cart');
 Route::delete('/shopping-cart/{id}', [CartController::class, 'destroy'])->name('delete.cart.item');
-// Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
-// Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
-// Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
-// Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
 Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
 Route::get('/bill-show', [CartController::class, 'billShow'])->name('bill.show');
 Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
-// routes/web.php
-// Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
 
 // crud webAdmin
@@ -88,3 +82,10 @@ Route::get('/dashboard', [AllController::class, 'getUsersCount'])->name('dashboa
 // Route::get('/profile', 'ProfileController@showProfile')->name('profile');
 // Route::get('/updateprofile', 'ProfileController@showUpdateProfile')->name('updateprofile');
 // Route::post('/updateprofile', 'ProfileController@updateProfile')->name('updateprofile.submit');
+
+// Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
+// Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
+// Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+// Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
+// routes/web.php
+// Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');

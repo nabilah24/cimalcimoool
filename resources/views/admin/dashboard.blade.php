@@ -57,55 +57,44 @@
                     <thead>
                         <tr>
                             <th>User</th>
-                            <th>Date Order</th>
-                            <th>Status</th>
+                            <th>Nama Produk</th>
+                            <th>Harga</th>
+                            <th>Total Produk</th>
+                            <th>Subtotal</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @php $count = 1; $subTotal = 0; @endphp
+                        @foreach(session('cart') as $cart)
                         <tr>
                             <td>
-                                <img src="img/people.png">
-                                <p>John Doe</p>
-                            </td>
-                            <td>01-10-2021</td>
-                            <td><span class="status completed">Completed</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="img/people.png">
-                                <p>John Doe</p>
-                            </td>
-                            <td>01-10-2021</td>
-                            <td><span class="status pending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="img/people.png">
-                                <p>John Doe</p>
-                            </td>
-                            <td>01-10-2021</td>
-                            <td><span class="status process">Process</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="img/people.png">
-                                <p>John Doe</p>
-                            </td>
-                            <td>01-10-2021</td>
-                            <td><span class="status pending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="img/people.png">
-                                <p>John Doe</p>
-                            </td>
-                            <td>01-10-2021</td>
-                            <td><span class="status completed">Completed</span></td>
-                        </tr>
+                                <tr>
+                                    <td>{{ $count }}</td>
+                                    <td>{{ $cart['nama_item'] }}</td>
+                                    <td>Rp {{ $cart['harga'] }}</td>
+                                    <td>{{ $cart['quantity'] }}</td>
+                                    <td>Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
+                                </tr>
+                                @php
+                                    $subTotal += $cart['harga'] * $cart['quantity'];
+                                    $count++;
+                                @endphp
+                        @endforeach
+                        <tfoot>
+                            <tr>
+                                <td colspan="4" class="text-right">
+                                    <h5><strong>Sub Total:  ₹ {{ $subTotal }}</strong></h5>
+                                    <h5><strong>Tax (5%) : ₹ {{ $subTotal * 0.05 }}</strong></h5>
+                                </td>
+                                <td class="text-center text-dark">
+                                    <h5><strong>Gross Total: ₹ {{ $subTotal + ($subTotal * 0.05) }}</strong></h5>
+                                </td>
+                            </tr>
+                        </tfoot>
                     </tbody>
                 </table>
             </div>
-            <div class="todo">
+            {{-- <div class="todo">
                 <div class="head">
                     <h3>Todos</h3>
                     <i class='bx bx-plus'></i>
@@ -133,7 +122,7 @@
                         <i class='bx bx-dots-vertical-rounded'></i>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </main>
 @endsection
