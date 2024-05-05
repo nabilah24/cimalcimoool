@@ -6,7 +6,7 @@ use App\Models\Menu;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Redirect,Response;
+use Redirect, Response;
 
 class CartController extends Controller
 {
@@ -25,10 +25,29 @@ class CartController extends Controller
     public function addMenutoCart($id)
     {
         $menu = Menu::findOrFail($id);
-        $cart = session()->get('cart', []);
+        if (!$menu) {
+            abort(404);
+        }
+        $cart = session()->get('cart');
+        // if cart is empty then this the first product
+        if (!$cart) {
+            $cart = [
+                $id => [
+                    'nama_item' => $menu->nama_item,
+                    'quantity' => 1,
+                    'harga' => $menu->harga,
+                    'gambar' => $menu->gambar,
+                ]
+            ];
+            session()->put('cart', $cart);
+            return redirect()->back()->with('success', 'Product added to cart successfully!');
+        }
+
+        // if item already exists in cart, increment its quantity
         if (isset($cart[$id])) {
             $cart[$id]['quantity']++;
         } else {
+            // if item not exist in cart then add to cart with quantity = 1
             $cart[$id] = [
                 'nama_item' => $menu->nama_item,
                 'quantity' => 1,
@@ -37,9 +56,23 @@ class CartController extends Controller
             ];
         }
         session()->put('cart', $cart);
-
-        return redirect()->back()->with('success', 'Item has been added to cart!');
+        return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
+
+        // $cart = session()->get('cart', []);
+        // if (isset($cart[$id])) {
+        //     $cart[$id]['quantity']++;
+        // } else {
+        //     $cart[$id] = [
+        //         'nama_item' => $menu->nama_item,
+        //         'quantity' => 1,
+        //         'harga' => $menu->harga,
+        //         'gambar' => $menu->gambar,
+        //     ];
+        // }
+        // session()->put('cart', $cart);
+
+        // return redirect()->back()->with('success', 'Item has been added to cart!');
 
     public function updateCart(Request $request)
     {
@@ -47,7 +80,7 @@ class CartController extends Controller
             $cart = session()->get('cart');
             $cart[$request->id]['quantity'] = $request->quantity;
             session()->put('cart', $cart);
-            session()->flash('success', 'Item added to cart.');
+            session()->flash('success', 'Cart updated successfully');
         }
     }
 
@@ -64,8 +97,8 @@ class CartController extends Controller
 
     public function billShow()
     {
-      $data['orders'] = DB::table('orders')->get();
-       return view("Bill",$data);
+        $data['orders'] = DB::table('orders')->get();
+        return view("Bill", $data);
     }
 
     public function getPrice()
@@ -75,15 +108,16 @@ class CartController extends Controller
         return Response::json($price);
     }
 
-    public function deleteProduct(Request $request)
+    public function destroy($id)
     {
-        if ($request->id) {
-            $cart = session()->get('cart');
-            if (isset($cart[$request->id])) {
-                unset($cart[$request->id]);
-                session()->put('cart', $cart);
-            }
-            session()->flash('success', 'Item successfully deleted.');
+        $cart = session()->get('cart');
+
+        if (isset($cart[$id])) {
+            unset($cart[$id]);
+            session()->put('cart', $cart);
+            session()->flash('success', 'Product removed successfully');
         }
+
+        return redirect()->back();
     }
 }

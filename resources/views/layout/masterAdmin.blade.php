@@ -55,7 +55,7 @@
                     <i class='bx bx-list-ul'></i>
                     <span class="text">User List</span>
                 </a>
-            </li> 
+            </li>
             <!-- <li class="{{ request()->routeIs('admin.user') ? 'active' : '' }}">
                 <a href="/user ">
                     <i class='bx bxs-user-account'></i>
@@ -73,7 +73,7 @@
                     <i class='bx bx-list-ul'></i>
                     <span class="text">Contact</span>
                 </a>
-            </li> 
+            </li>
         </ul>
         <ul class="side-menu">
             <!-- <li>
@@ -110,7 +110,7 @@
                 <img src="{{ asset('assets/images/user/agent.jpg') }}">
             </div>
             <a href="/userProfile" class="user">
-                {{-- {{ auth()->user()->name }} --}}Admin
+                Admin
             </a>
         </nav>
         {{-- navbar end --}}

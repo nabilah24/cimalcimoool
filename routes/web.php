@@ -9,22 +9,19 @@ use App\Models\Login;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Models\ShoppingCart;
 
-
-// web utama 
+// web utama
 Route::get('/', [AllController::class, 'index']);
 
-
-Route::get('/shopping', [CartController::class, 'index']);
 Route::get('/shopping-cart', [CartController::class, 'menuCart'])->name('shopping.cart');
 Route::get('/menu/{id}', [CartController::class, 'addMenutoCart'])->name('addmenu.to.cart');
 Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.shopping.cart');
-Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
-Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
-Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
-// routes/web.php
-Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
-Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
+Route::delete('/shopping-cart/{id}', [CartController::class, 'destroy'])->name('delete.cart.item');
+// Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
+// Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
+// Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+// Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
 
 // crud webAdmin
 Route::middleware('auth')->group(function () {
