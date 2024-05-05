@@ -69,7 +69,8 @@
                                     <a href="{{ url('/menu') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>
                                         Continue
                                         Shopping</a>
-                                    <button class="btn btn-danger" type="submit">Checkout</button>
+                                    <button class="btn btn-danger checkout-btn" id="checkout-btn" type="submit">Checkout</button>
+
                                 </td>
                             </tr>
                         </tfoot>
@@ -116,6 +117,20 @@
                     }
                 });
             }
+        });
+
+        $(".checkout-btn").click(function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: '{{ route('checkout') }}',
+                method: "POST",
+                data: {
+                    _token: '{{ csrf_token() }}'
+                },
+                success: function(response) {
+                    window.location.href = '{{ route('bill.show') }}';
+                }
+            });
         });
     </script>
 @endsection
