@@ -44,7 +44,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/menu/{id}', [CartController::class, 'addMenutoCart'])->name('addmenu.to.cart');
     Route::patch('/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.shopping.cart');
     Route::delete('/shopping-cart/{id}', [CartController::class, 'destroy'])->name('delete.cart.item');
-    Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name('delete.cart.item');
     Route::get('/bill-show', [CartController::class, 'billShow'])->name('bill.show');
     Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
     Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
