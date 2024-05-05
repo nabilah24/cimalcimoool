@@ -119,7 +119,7 @@
 
     {{-- menu-item-modals --}}
     @foreach ($menus as $menu)
-        <div class="menu-modal modal fade" id="menuModal{{ $menu->id }}" tabindex="-1"
+        <div class="menu-modal modal fade text-dark" id="menuModal{{ $menu->id }}" tabindex="-1"
             aria-labelledby="menuModal{{ $menu->id }}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content" style="background: var(--light)">
