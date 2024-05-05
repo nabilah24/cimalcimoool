@@ -1,7 +1,6 @@
 @extends('layout.masterAdmin')
 
 @section('content')
-
     <main>
         <div class="head-title">
             <div class="left">
@@ -17,16 +16,20 @@
                 </ul>
             </div>
             <!-- <a href="#" class="btn-download">
-                <i class='bx bxs-cloud-download'></i>
-                <span class="text">Download PDF</span>
-            </a> -->
+                                <i class='bx bxs-cloud-download'></i>
+                                <span class="text">Download PDF</span>
+                            </a> -->
         </div>
 
         <ul class="box-info">
             <li>
                 <i class='bx bxs-calendar-check'></i>
                 <span class="text">
-                    <h3>1020</h3>
+                    @php
+                        $count = 1;
+                        $subTotal = 0;
+                    @endphp
+                    <h3>{{ $count }}</h3>
                     <p>New Order</p>
                 </span>
             </li>
@@ -40,7 +43,7 @@
             <li>
                 <i class='bx bxs-dollar-circle'></i>
                 <span class="text">
-                    <h3>$2543</h3>
+                    <h3>Rp{{ $subTotal }}</h3>
                     <p>Total Sales</p>
                 </span>
             </li>
@@ -64,33 +67,32 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @php $count = 1; $subTotal = 0; @endphp
-                        @foreach(session('cart') as $cart)
-                        <tr>
-                            <td>
-                                <tr>
-                                    <td>{{ $count }}</td>
-                                    <td>{{ $cart['nama_item'] }}</td>
-                                    <td>Rp {{ $cart['harga'] }}</td>
-                                    <td>{{ $cart['quantity'] }}</td>
-                                    <td>Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
-                                </tr>
-                                @php
-                                    $subTotal += $cart['harga'] * $cart['quantity'];
-                                    $count++;
-                                @endphp
-                        @endforeach
-                        <tfoot>
+                        @php
+                            $count = 1;
+                            $subTotal = 0;
+                        @endphp
+                        @foreach (session('cart') as $cart)
                             <tr>
-                                <td colspan="4" class="text-right">
-                                    <h5><strong>Sub Total:  ₹ {{ $subTotal }}</strong></h5>
-                                    <h5><strong>Tax (5%) : ₹ {{ $subTotal * 0.05 }}</strong></h5>
-                                </td>
-                                <td class="text-center text-dark">
-                                    <h5><strong>Gross Total: ₹ {{ $subTotal + ($subTotal * 0.05) }}</strong></h5>
-                                </td>
+                                <td>
+                            <tr>
+                                <td>{{ $count }}</td>
+                                <td>{{ $cart['nama_item'] }}</td>
+                                <td>Rp {{ $cart['harga'] }}</td>
+                                <td>{{ $cart['quantity'] }}</td>
+                                <td>Rp {{ $cart['harga'] * $cart['quantity'] }}</td>
                             </tr>
-                        </tfoot>
+                            @php
+                                $subTotal += $cart['harga'] * $cart['quantity'];
+                                $count++;
+                            @endphp
+                        @endforeach
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="text-right">
+                                <h5><strong>Gross Total: Rp {{ $subTotal }}</strong></h5>
+                            </td>
+                        </tr>
+                    </tfoot>
                     </tbody>
                 </table>
             </div>
