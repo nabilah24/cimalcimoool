@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
 
-// web utama 
+// web utama
 Route::get('/', [AllController::class, 'index']);
 
 
@@ -23,8 +23,8 @@ Route::delete('/delete-cart-item', [CartController::class, 'deleteItem'])->name(
 Route::get('/bill', [CartController::class, 'billShow'])->name('bill.show');
 Route::get('/getPrice/{id}', [CartController::class, 'getPrice'])->name('total.price');
 // routes/web.php
-Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
-Route::post('/checkout', [CartController::class, 'store'])->name('checkout.store');
+// Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
 
 // crud webAdmin
 Route::middleware('auth')->group(function () {
