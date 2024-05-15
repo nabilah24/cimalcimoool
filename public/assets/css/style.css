@@ -710,47 +710,16 @@ nav.solid {
 .hero {
     background: var(--dark);
     min-height: 50%;
-    padding: calc(4rem - 30px) 0 4rem 0;
-}
-
-@media (min-width: 768px) {
-    .hero {
-        padding: calc(4rem - 30px) 0 4rem 0;
-    }
-}
-
-@media (min-width: 992px) {
-    .hero {
-        padding: calc(8rem - 30px) 0 8rem 0;
-    }
-}
-
-.hero .intro-excerpt {
-    position: relative;
-    z-index: 4;
-}
-
-@media (min-width: 992px) {
-    .hero .intro-excerpt {
-        max-width: 450px;
-    }
+    padding: 4rem 0;
+    position: relative; /* Tambahkan posisi relatif ke .hero */
 }
 
 .hero h1 {
     font-weight: 700;
     color: #ffffff;
-    font-size: 80px;
-    margin-top: 100px;
-}
-
-@media (min-width: 1400px) {
-    .hero h1 {
-        font-size: 54px;
-    }
-}
-
-.hero p {
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 36px; /* Mengurangi ukuran font untuk handphone */
+    margin-top: 50px; /* Mengurangi jarak atas untuk handphone */
+    text-align: center; /* Pusatkan teks untuk handphone */
 }
 
 .hero .hero-img-wrap {
@@ -758,55 +727,88 @@ nav.solid {
 }
 
 .hero .hero-img-wrap img {
-    position: relative;
-    top: 0px;
-    right: 0px;
-    z-index: 2;
-    max-width: 780px;
-    left: -20px;
+    display: block;
+    margin: 0 auto; /* Pusatkan gambar untuk handphone */
+    max-width: 100%; /* Pastikan gambar tidak keluar dari layar handphone */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan agar tidak terlalu besar */
+}
+
+.hero .hero-img-wrap:after {
+    content: none; /* Sembunyikan dots-light.svg untuk handphone */
 }
 
 @media (min-width: 768px) {
+    .hero {
+        padding: calc(4rem - 30px) 0 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: 80px;
+        margin-top: 100px;
+        text-align: left; /* Kembali ke tata letak kiri untuk tablet dan desktop */
+    }
+
     .hero .hero-img-wrap img {
-        right: 0px;
-        left: -100px;
+        margin: 0; /* Hapus margin pusat untuk tablet dan desktop */
     }
 }
 
 @media (min-width: 992px) {
+    .hero {
+        padding: calc(8rem - 30px) 0 8rem 0;
+    }
+
     .hero .hero-img-wrap img {
-        left: 0px;
+        left: 0;
         top: -80px;
         position: absolute;
         right: -50px;
     }
+
+    .hero .hero-img-wrap:after {
+        display: block; /* Tampilkan dots-light.svg untuk tablet dan desktop */
+    }
+}
+
+@media (min-width: 995px) and (max-width: 1199px) {
+    .hero {
+        padding: calc(8rem - 30px) 0 8rem 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero h1 {
+        flex: 1; /* Agar teks mengisi ruang yang tersedia */
+        margin-top: 0;
+    }
+
+    .hero .hero-img-wrap {
+        flex: 1; /* Agar gambar mengisi ruang yang tersedia */
+        position: relative;
+        max-width: 50%; /* Membatasi lebar gambar agar tidak tabrakan dengan teks */
+        margin-left: auto; /* Pindahkan gambar ke kanan */
+    }
+
+    .hero .hero-img-wrap img {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        right: 0;
+        top: 0;
+    }
 }
 
 @media (min-width: 1200px) {
     .hero .hero-img-wrap img {
-        left: 0px;
-        top: -80px;
         right: -100px;
     }
-}
 
-.hero .hero-img-wrap:after {
-    content: "";
-    position: absolute;
-    width: 255px;
-    height: 217px;
-    background-image: url("../images/svg/dots-light.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    right: -100px;
-    top: -0px;
-}
-
-@media (min-width: 1200px) {
     .hero .hero-img-wrap:after {
         top: -40px;
     }
 }
+
+
 
 /* menu */
 .nav-pills .nav-item i {
